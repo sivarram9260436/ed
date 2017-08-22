@@ -1,0 +1,9 @@
+<%@others_profile.each do |p|%></br>
+<table>
+   <tr>
+    <td><%=link_to p.emp_name, :controller=>"employee", :action=>"view_others_profile", :employee_detail_id=>p.id if p.emp_name%></td>
+   </tr>
+<%end%>
+</table>
+
+

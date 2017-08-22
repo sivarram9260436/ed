@@ -1,0 +1,50 @@
+{:uriI"îfile://app/assets/bootstrap/docs/_includes/components/badges.html?type=text/html&id=b63725ce2d88fdf0996180c710e98d9d46b7a96d9b0a47b5d1886854667d18c8:ET:load_pathI"app/assets/bootstrap;T:filenameI"?app/assets/bootstrap/docs/_includes/components/badges.html;T:	nameI"%docs/_includes/components/badges;T:logical_pathI"*docs/_includes/components/badges.html;T:content_typeI"text/html;T:sourceI"ë<div class="bs-docs-section">
+  <h1 id="badges" class="page-header">Badges</h1>
+
+  <p class="lead">Easily highlight new or unread items by adding a <code>&lt;span class="badge"&gt;</code> to links, Bootstrap navs, and more.</p>
+
+  <div class="bs-example" data-example-id="simple-badges">
+    <a href="#">Inbox <span class="badge">42</span></a>
+    <br><br>
+    <button class="btn btn-primary" type="button">
+      Messages <span class="badge">4</span>
+    </button>
+  </div>
+{% highlight html %}
+<a href="#">Inbox <span class="badge">42</span></a>
+
+<button class="btn btn-primary" type="button">
+  Messages <span class="badge">4</span>
+</button>
+{% endhighlight %}
+
+  <h4>Self collapsing</h4>
+  <p>When there are no new or unread items, badges will simply collapse (via CSS's <code>:empty</code> selector) provided no content exists within.</p>
+
+  <div class="bs-callout bs-callout-danger" id="callout-badges-ie8-empty">
+    <h4>Cross-browser compatibility</h4>
+    <p>Badges won't self collapse in Internet Explorer 8 because it lacks support for the <code>:empty</code> selector.</p>
+  </div>
+
+  <h4>Adapts to active nav states</h4>
+  <p>Built-in styles are included for placing badges in active states in pill navigations.</p>
+  <div class="bs-example" data-example-id="badges-in-pills">
+    <ul class="nav nav-pills" role="tablist">
+      <li role="presentation" class="active"><a href="#">Home <span class="badge">42</span></a></li>
+      <li role="presentation"><a href="#">Profile</a></li>
+      <li role="presentation"><a href="#">Messages <span class="badge">3</span></a></li>
+    </ul>
+  </div>
+{% highlight html %}
+<ul class="nav nav-pills" role="tablist">
+  <li role="presentation" class="active"><a href="#">Home <span class="badge">42</span></a></li>
+  <li role="presentation"><a href="#">Profile</a></li>
+  <li role="presentation"><a href="#">Messages <span class="badge">3</span></a></li>
+</ul>
+{% endhighlight %}
+</div>
+;T:metadata{	:dependencieso:Set:
+@hash}
+I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"2processors:type=text/html&file_type=text/html;TTI"Mfile-digest://app/assets/bootstrap/docs/_includes/components/badges.html;TTF:charsetI"
+utf-8;F:digest"%p“tQ\∏ùµ5pz¬TG[a9µU#q∂kÚ{”:ñ°iB:lengthië:dependencies_digest"%eVE"îÙ”&Ë)+a«òw	£ö‹˘ÖüØS¢6ÿ:idI"Eb63725ce2d88fdf0996180c710e98d9d46b7a96d9b0a47b5d1886854667d18c8;F:
+mtimel+ú5ñW

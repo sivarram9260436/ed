@@ -1,0 +1,52 @@
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Employee Leave Management Software</title>
+<link rel="stylesheet" type="text/css" media="screen"href="/stylesheets/welcomestyle.css" />
+
+</head>
+<body>
+<div id="wrapper">
+<div id="top-menu">
+<div id="account">
+<ul>
+<li>
+<a class="login" href="/login">Sign in</a>
+</li>
+<li>
+<a class="register" href="/account/register">Register</a>
+</li>
+</ul>
+</div>
+<ul>
+<li>
+<a class="home" href="/welcome">Home</a>
+</li>
+<li>
+<a class="projects" href="/projects">Projects</a>
+</li>
+</ul>
+</div><!--topmenu-->
+<div id="wrapper_header">
+<div class="header">
+<div class="header_left">
+<img src="/home/shabrin/Downloads/kreatio_logo.jpg" alt="Kreatio-logo"height=60; width =120>
+</div>
+<div class="header_right">
+<h1>KREATIO EDMS</h1>
+</div>
+</div>
+</div><!--header-->
+<div id="mainmenu" class="menucontainer">
+<ul class="menulist" cellspacing="20">
+<a class="active" title="Home" href="/">Home</a>
+<a class="contact" title="AboutUs" href="/">AboutUs</a>
+</div><!--mainmenu-->
+<div id="container">
+<h2>Welcome to Employee And Leave Management Software</h2>
+<%= yield %>
+</div><!--container-->
+
+<div id="footer">Employee & Leave Management Software </div>
+</div><!--wrapper-->
+</body>	
+</html>

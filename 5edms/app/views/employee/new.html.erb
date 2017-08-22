@@ -1,0 +1,802 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Modify Profile</title>
+  <!--<meta charset="utf-8">-->
+  <!--<meta http-equiv="X-UA-Compatible" content="IE=edge">-->
+  <!--<meta name="viewport" content="width=device-width, initial-scale=1">-->
+  <!--<meta name="description" content="">-->
+  <!--<meta name="hemant" content="">-->
+  <!--<link href="/font-awesome/css/font-awesome.min.css" rel="stylesheet">-->
+  <!--<link href="/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">-->
+  <!--<link href="/css/side-menu.css" rel="stylesheet">-->
+  <!--<link href="/font-awesome/css/font-awesome.css" rel="stylesheet">-->
+  <!--<link rel="stylesheet" href="/animated/animate.css">-->
+  <!--<link rel="stylesheet" href="/css/responsive.css">-->
+  <!--<link rel="stylesheet" href="/api/datePicker/css/datepicker.css">-->
+  <!--<script src="/bootstrap/js/jquery-3.1.0.js"></script>-->
+  <!--<link rel="stylesheet" href="/validation/css/bootstrapValidation.min.css">-->
+  <!--<script src="/validation/js/bootstrapValidation.min.js"></script>-->
+  <!--<link type="/text/css" rel="stylesheet" href="/css/tabs.css"/>-->
+  <!--<script src="/js/functionality.js"></script>-->
+  <!--<link type="text/css" rel="stylesheet" href="/css/modifyProfile.css"/>-->
+
+</head>
+<body>
+<!--<nav class="navbar navbar-default nav-header ">-->
+<!--&lt;!&ndash; Brand and toggle get grouped for better mobile display &ndash;&gt;-->
+<!--<div class="navbar-header fixed-brand" >-->
+<!--<button type="button" class="navbar-toggle collapsed" data-toggle="collapse"  id="menu-toggle">-->
+<!--&lt;!&ndash;<span class="fa fa-bars"  aria-hidden="true"></span>&ndash;&gt;-->
+<!--</button>-->
+<!--<a class="navbar-brand " href="#"><i><img src="images/logotransparent.png"  class="img-logo"></i></a>-->
+<!--</div>&lt;!&ndash; navbar-header&ndash;&gt;-->
+
+<!--<div class="collapse navbar-collapse profile" >-->
+<!--<ul class="nav navbar-nav">-->
+<!--&lt;!&ndash; Dropdown language &ndash;&gt;-->
+<!--<li class="dropdown">-->
+<!--<a href="#fakelink" class="dropdown-toggle" data-toggle="dropdown"> How'dy Hemant <i class="fa fa-user i-xs"></i></a>-->
+<!--<ul class="dropdown-menu animated half flipInX">-->
+<!--<li><a href="#fakelink">Edit profile</a></li>-->
+<!--<li><a href="#fakelink">logout</a></li>-->
+<!--</ul>-->
+<!--</li>-->
+<!--</ul>-->
+<!--</div>&lt;!&ndash; bs-example-navbar-collapse-1 &ndash;&gt;-->
+<!--</nav>-->
+<!-- Sidebar -->
+<!--<div id="wrapper">-->
+<div id="sidebar-wrapper">
+  <ul class="sidebar-nav nav-pills nav-stacked" id="menu">
+    <li class="active">
+      <a href="/employee/welcome"><span class="fa-stack fa-lg pull-left"><i class="fa fa fa-home fa-stack-1x "></i></span>Home</a>
+    </li>
+    <li>
+      <a href="#" id="emp"><span class="fa-stack fa-lg pull-left"><i class="fa fa-user fa-stack-1x "></i></span>Employee profile</a>
+      <ul class="nav-pills nav-stacked" style="list-style-type:none;" id="emp-opt">
+
+        <li><a href="/employee/new"><span class="fa-stack fa-lg pull-left"><i class="fa  fa-user-plus fa-stack-1x "></i></span>modify</a></li>
+        <li><a href="/employee/index"><span class="fa-stack fa-lg pull-left"><i class="fa  fa-eye fa-stack-1x "></i></span>view Profile</a></li>
+        <li><a href="/employee/view_others_profile"><span class="fa-stack fa-lg pull-left"><i class="fa  fa-group fa-stack-1x "></i></span>view others profile</a></li>
+
+      </ul>
+    </li>
+    <li>
+      <a href="#" id="leave"><span class="fa-stack fa-lg pull-left" ><i class="fa fa-pencil-square-o fa-stack-1x "></i></span>Leave</a>
+      <ul class="nav-pills nav-stacked" style="list-style-type:none;" id="leave-opt">
+        <li><a href="/select/apply"><span class="fa-stack fa-lg pull-left"><i class="fa fa-envelope-o fa-stack-1x "></i></span>apply leave</a></li>
+        <li><a href="/select/cancel"><span class="fa-stack fa-lg pull-left"><i class="fa fa-times-circle-o fa-stack-1x "></i></span>Cancell leave</a></li>
+        <li><a href="/select/view_approved"><span class="fa-stack fa-lg pull-left"><i class="fa fa-file-word-o fa-stack-1x "></i></span>leave approved</a></li>
+        <li><a href="/select/list"><span class="fa-stack fa-lg pull-left"><i class="fa fa-sticky-note fa-stack-1x "></i></span>leave status</a></li>
+        <li><a href="/select/leave_balance"><span class="fa-stack fa-lg pull-left"><i class="fa fa-sticky-note-o fa-stack-1x "></i></span>basic leave info</a></li>
+
+      </ul>
+    </li>
+    <li>
+      <a href="#"><span class="fa-stack fa-lg pull-left"><i class="fa fa-server fa-stack-1x "></i></span>Miscellaneous</a>
+    </li>
+    <li>
+      <a href="#"> <span class="fa-stack fa-lg pull-left"><i class="fa fa-phone fa-stack-1x "></i></span>Contact us</a>
+    </li>
+
+  </ul>
+</div><!--This is sidebar-wrapper -->
+<div id="page-content-wrapper">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
+        <div class="panel-group" id="steps">
+          <!-- Step 1 -->
+          <div class="panel panel-primary">
+            <div class="panel-heading">
+              <h4 class="panel-title"><a data-toggle="collapse" data-parent="#steps" href="#stepOne">Official Details</a></h4>
+            </div>
+            <div id="stepOne" class="panel-collapse collapse in">
+              <div class="panel-body">
+                <div class="container-fluid">
+                  <div class="row">
+                    <form id="defaultForm" method="post" class="form-horizontal" action="#">
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label class="col-sm-4 control-label">Title</label>
+                          <div class="col-sm-8">
+
+                            <%=form_for(@employee_detail, :url => {:controller=>"employee",:action=>"create"}) do |f|  %>
+
+
+                                <%=raw error_messages(@employee_detail)%>
+
+
+
+                                <!--<input class="form-control " type="password" placeholder="Password"  >-->
+                                <!--<!%= password_field :employee_detail,:password,:class=>'form-control', :placeholder=>'Password'%>-->
+
+
+                                <!--<!%=f.select :title ,:class => "col-sm-8", :option_value=>"&#45;&#45; Select a Title &#45;&#45;",:option_value =>"fr",:option_value =>"de",:option_value =>"it"%>-->
+
+                                <!--<option value="value" class="option_class">display</option>-->
+
+
+
+                                <div class="col-sm-8">
+
+                                  <%#= f.select(:title, ['Item 1', 'Item 2'], {include_blank: "Select something"}, { :class => 'form-control' }) %>
+                                  <%= f.select :title, options_for_select([['Mr'], ['Ms'], ['Mrs']]),{}, {:class => 'form-control'} %>
+                                  <!--<select  name="title">-->
+                                  <!--<option value="">&#45;&#45; Select a Title &#45;&#45;</option>-->
+                                  <!--<option value="fr">Mr</option>-->
+                                  <!--<option value="de">Ms</option>-->
+                                  <!--<option value="it">Mrs</option>-->
+                                  <!--</select>-->
+                                </div>
+
+                                </div>
+                                </div>
+
+
+
+                                <div class="form-group">
+
+
+
+                                  <label class="col-sm-4 control-label">First Name</label>
+
+                                  <div class="col-sm-8">
+                                    <%=f.text_field :emp_name,:placeholder=>"first name",:class =>"form-control"%>
+                                  </div>
+                                </div>
+
+                                <div class="form-group">
+
+                                  <label class="col-sm-4 control-label">Middle name</label>
+                                  <div class="col-sm-8">
+                                    <%=f.text_field :middle_name,:placeholder=>"Middlename",:class =>"form-control"%>
+
+                                    <!--<input type="text" class="form-control" name="middle_name" placeholder="middle name"/>-->
+                                  </div>
+                                </div>
+
+                                <div class="form-group">
+                                  <label class="col-sm-4 control-label">Last Name</label>
+                                  <div class="col-sm-8">
+                                    <%=f.text_field :last_name,:placeholder=>"last name",:class =>"form-control"%></td>
+
+                                    <!--<input type="text" class="form-control" name="last_name"  placeholder="last name"/>-->
+                                  </div>
+                                </div>
+
+                                <div class="form-group">
+                                  <label class="col-sm-4 control-label"><abbr>D.O.B</abbr></label>
+                                  <div class="col-sm-8">
+
+                                    <%=f.text_field :dob,:placeholder=>"DD/MM/YYYY",:class =>"form-control"%>
+
+                                    <!--<input type="text" class="form-control" name="dob" id="dob" placeholder="DD/MM/YYYY"/>-->
+                                  </div>
+                                </div>
+
+
+
+                                <div class="form-group">
+                                  <label class="col-sm-4 control-label">Gender</label>
+                                  <div class="col-sm-8">
+                                    <!--<select class="form-control" name="gender">-->
+
+                                    <%=f.select :gender,options_for_select([['Male'], ['Female'], ['Others']]),{}, {:class => 'form-control'}%>
+
+                                    <!--<!%= f.select :title, options_for_select([['Mr'], ['Ms'], ['Mrs']]),{}, {:class => 'form-control'} %>-->
+
+                                    <!--<option value="">&#45;&#45; Select Gender &#45;&#45;</option>-->
+                                    <!--<option value="Male">Male</option>-->
+                                    <!--<option value="Female">Female</option>-->
+                                    <!--<option value="other">other</option>-->
+
+                                    <!--</select>-->
+                                  </div>
+                                </div>
+
+
+
+                                <div class="form-group">
+                                  <label class="col-sm-4 control-label">Martial status</label>
+                                  <div class="col-sm-8">
+
+                                    <%=f.select :martial_status, options_for_select([['Married'], ['Unmarried']]),{}, {:class => 'form-control'}%>
+
+                                    <!--<!%=f.select :gender,options_for_select([['Male'], ['Female'], ['Others']]),{}, {:class => 'form-control'}%>-->
+
+                                    <!--<select class="form-control" name="martial">-->
+                                    <!--<option value="">&#45;&#45; Select one &#45;&#45;</option>-->
+                                    <!--<option value="Married">Married</option>-->
+                                    <!--<option value="UnMarried">unMarried</option>-->
+                                    <!--</select>-->
+                                    <!---->
+                                  </div>
+                                </div>
+
+
+
+                                <div class="form-group">
+
+
+                                  <label class="col-sm-4 control-label">Contact No</label>
+                                  <div class="col-sm-8">
+
+                                    <%=f.telephone_field :contact_no,:placeholder=>"Contact no",:class =>"form-control"%>
+
+                                    <!--<!%=f.text_field :dob,:placeholder=>"DD/MM/YYYY",:class =>"form-control"%>-->
+
+                                    <!--<input type="text" class="form-control" name="contact" placeholder="contact no "/>-->
+                                  </div>
+                                </div>
+                                </div>
+
+
+                                <div class="col-md-6">
+                                  <div class="form-group">
+                                    <label class="col-sm-4 control-label"><abbr title="date of joining us">D.O.J</abbr></label>
+                                    <div class="col-sm-8">
+
+                                      <%=f.text_field :date_of_join,:placeholder=>"YYYY/MM/DD",:class =>"form-control"%>
+                                      <!--<input type="text" class="form-control" name="doj" placeholder="YYYY/MM/DD" id="doj">-->
+                                    </div>
+                                  </div>
+
+                                  <div class="form-group">
+                                    <label class="col-sm-4 control-label">Employee ID</label>
+                                    <div class="col-sm-8">
+                                      <%=f.text_field :empl_id,:placeholder=>"Employee id",:class =>"form-control"%>
+
+                                      <!--<input type="text" class="form-control" name="employee_id" placeholder="Employee id" />-->
+                                    </div>
+                                  </div>
+
+                                  <div class="form-group">
+                                    <label class="col-sm-4 control-label">PAN Number</label>
+                                    <div class="col-sm-8">
+
+                                      <%=f.text_field :pan_number,:placeholder=>"PAN NO",:class =>"form-control"%>
+
+                                      <!--<input type="text" class="form-control" name="pan" placeholder="PAN NO"/>-->
+                                    </div>
+                                  </div>
+
+                                  <div class="form-group">
+                                    <label class="col-sm-4 control-label">PF Number</label>
+                                    <div class="col-sm-8">
+                                      <%=f.text_field :pf_number,:placeholder=>"PF Number",:class =>"form-control"%>
+
+                                      <!--<input type="text" class="form-control" name="pf" placeholder="PF Number" />-->
+                                    </div>
+                                  </div>
+
+                                  <div class="form-group">
+                                    <label class="col-sm-4 control-label"><abbr title="U.A.N is universal Account No it's optional">PF UAN no.</abbr></label>
+                                    <div class="col-sm-8">
+
+                                      <%=f.text_field :pf_uan_no,:placeholder=>"UAN no",:class =>"form-control" %>
+
+                                      <!--<input type="text" class="form-control" name="uan"  placeholder="UAN no"/>-->
+                                    </div>
+                                  </div>
+
+
+                                  <div class="form-group">
+                                    <label class="col-sm-4 control-label"><abbr title=" official example example@kreatio.com">Offi. Mail Id</abbr></label>
+                                    <div class="col-sm-8">
+
+                                      <%=f.text_field :official_mailid,:placeholder=>"PF Number",:class =>"form-control"%>
+
+                                      <!--<input type="email" class="form-control" name="official_id" placeholder="official id" />-->
+                                    </div>
+                                  </div>
+
+
+                                  <div class="form-group">
+                                    <label class="col-sm-4 control-label"><abbr title="your team manager or team lead mail id">Appr. Mail Id</abbr></label>
+                                    <div class="col-sm-8">
+
+                                      <%=f.text_field :manager_mailid,:placeholder=>"approvar id",:class =>"form-control"%>
+
+                                      <!--<input type="email" class="form-control" name="Approval_mail" placeholder=" approval id" />-->
+                                    </div>
+                                  </div>
+
+
+                                  <div class="form-group">
+                                    <label class="col-sm-4 control-label"><abbr title="official Contact no">Offi. Cont. no.</abbr></label>
+                                    <div class="col-sm-8">
+
+                                      <%= f.telephone_field :office_contact_no,:placeholder=>"office contact no",:class =>"form-control"%>
+                                      <!--<input type="text" class="form-control" name="office_contact"  placeholder="office contact no"/>-->
+                                    </div>
+                                  </div>
+
+                                  <div class="form-group pull-right">
+                                    <div class="col-sm-8">
+
+                                      <%=f.submit "update",:class=>"btn btn-primary"%>
+
+                                      <!--<button type="submit" class="btn btn-primary" name="update" >Update</button>-->
+                                    </div>
+                                  </div>
+                                </div>
+                                </form>
+
+                                </div>
+                                </div>
+                                </div>
+                                </div>
+                                </div>
+                                <!-- Step 2 -->
+                                <div class="panel panel-danger" >
+                                  <div class="panel-heading">
+                                    <h4 class="panel-title"><a data-toggle="collapse" data-parent="#steps" href="#stepTwo">Personal Details</a></h4>
+                                  </div>
+                                  <div id="stepTwo" class="panel-collapse collapse">
+                                    <div class="panel-body">
+
+                                      <%= f.fields_for :personal_detail do |personal| %>
+                                          <!-- starts here-->
+                                          <form id="Personal" method="post" class="form-horizontal" action="#">
+                                            <div class="col-sm-6">
+
+                                              <div class="form-group">
+                                                <label class="col-sm-4 control-label">Father Name</label>
+                                                <div class="col-sm-8">
+
+                                                  <%=personal.text_field :father_name,:placeholder=>"father name ",:class =>"form-control"%>
+
+                                                  <!--<input type="text" class="form-control" name="father_name"  placeholder="father name"/>-->
+                                                </div>
+                                              </div>
+
+
+                                              <div class="form-group">
+                                                <label class="col-sm-4 control-label">Local Address</label>
+                                                <div class="col-sm-8">
+
+                                                  <%=personal.text_area :local_address,:placeholder=>"your local address",:class =>"form-control"%>
+                                                  <!--<textarea class="form-control" rows="5" id="comment" name="local_addr" placeholder="your local address"></textarea>-->
+                                                </div>
+                                              </div>
+
+
+                                              <div class="form-group">
+                                                <label class="col-sm-4 control-label"><abbr title="Your official skype id its optional">Skype ID</abbr></label>
+                                                <div class="col-sm-8">
+                                                  <input type="text" class="form-control" name="skype id" placeholder="Skype ID "/>
+
+                                                </div>
+                                              </div>
+
+
+                                              <div class="form-group">
+                                                <label class="col-sm-4 control-label"><abbr title="some one whome we can contact in emercency">Emergencey no</abbr></label>
+                                                <div class="col-sm-8">
+
+                                                  <%=personal.telephone_field :emergency_contact,:placeholder=>"Person number",:class =>"form-control"%></td>
+
+                                                  <!--<input type="text" class="form-control" name="econtact" placeholder="Person name "/>-->
+
+                                                </div>
+                                              </div>
+                                              <div class="form-group">
+                                                <label class="col-sm-4 control-label"><abbr title="some one whome we can contact in emercency no">Emergencey Person</abbr></label>
+                                                <div class="col-sm-8">
+
+                                                  <%=personal.text_field :guardian,:placeholder=>"Person name",:class =>"form-control"%></td>
+                                                  <!--<input type="text" class="form-control" name="econtactp" placeholder="Person number "/>-->
+
+                                                </div>
+                                              </div>
+                                              <div class="form-group">
+                                                <label class="col-sm-4 control-label">Passport</label>
+                                                <div class="col-sm-8">
+
+                                                  <%=personal.text_field :passport_number,:placeholder=>"Passport",:class =>"form-control"%>
+
+
+                                                  <!--<input type="text" class="form-control" name="passport" placeholder="Passport "/>-->
+
+                                                </div>
+                                              </div>
+                                              <div class="form-group">
+                                                <label class="col-sm-4 control-label">Linkedin Account</label>
+                                                <div class="col-sm-8">
+                                                  <%= personal.text_field :linkedin_url,:placeholder=>"Your linkedin Account",:class =>"form-control"%>
+
+                                                  <!--<input type="text" class="form-control" name="linkedin" placeholder="Your linkedin Account "/>-->
+
+                                                </div>
+                                              </div>
+                                            </div>
+
+                                            <div class="col-sm-6">
+
+                                              <div class="form-group">
+                                                <label class="col-sm-4 control-label">Mother Name</label>
+                                                <div class="col-sm-8">
+
+                                                  <%=personal.text_field :mother_name,:placeholder=>"mother name",:class =>"form-control"%>
+
+
+                                                  <!--<input type="text" class="form-control" name="mother_name"  placeholder="mother name"/>-->
+                                                </div>
+                                              </div>
+
+                                              <div class="form-group">
+                                                <label class="col-sm-4 control-label">Your Anniversary</label>
+                                                <div class="col-sm-8">
+
+                                                  <%=personal.text_field :anniversary_date,:placeholder=>"anniversary date ",:class =>"form-control"%>
+                                                  <!--<input type="text" class="form-control" name="doa" id="doa" placeholder="DD/MM/YYYY"/>-->
+                                                </div>
+                                              </div>
+                                              <div class="form-group">
+                                                <label class="col-sm-4 control-label">Permanent Address</label>
+                                                <div class="col-sm-8">
+
+                                                  <%=personal.text_field :anniversary_date,:placeholder=>"your permanent address",:class =>"form-control"%>
+
+                                                  <!--<textarea class="form-control" rows="5" id="paddr" name="paddr" placeholder="your permanent address"></textarea>-->
+                                                </div>
+                                              </div>
+
+
+                                              <div class="form-group">
+                                                <label class="col-sm-4 control-label"><abbr title="relationship with the details mention above">RelationShip</abbr></label>
+                                                <div class="col-sm-8">
+
+
+
+                                                  <%=personal.text_field :relationship,:placeholder=>"relationship",:class =>"form-control"%></td></tr>
+
+                                                  <!--<input type="text" class="form-control" name="relationship" placeholder="relationship "/>-->
+
+                                                </div>
+                                              </div>
+                                              <div class="form-group">
+                                                <label class="col-sm-4 control-label"><abbr title=" your blood group">Blood Group</abbr></label>
+                                                <div class="col-sm-8">
+
+                                                  <%=personal.text_field :blood_group,:placeholder=>"your Blood group",:class =>"form-control"%></td></tr>
+
+                                                  <!--<input type="text" class="form-control" name="blood_group" placeholder="your Blood group"/>-->
+
+                                                </div>
+                                              </div>
+                                              <div class="form-group">
+                                                <label class="col-sm-4 control-label">Facebook</label>
+                                                <div class="col-sm-8">
+                                                  <%=personal.text_field :facebook_url,:placeholder=>"facebook account",:class =>"form-control"%></td>
+
+                                                  <!--<input type="text" class="form-control" name="facebook" placeholder="facebook account "/>-->
+
+                                                </div>
+                                              </div>
+                                              <div class="form-group">
+                                                <label class="col-sm-4 control-label">Twitter</label>
+                                                <div class="col-sm-8">
+                                                  <%=personal.text_field :twitter_url,:placeholder=>"twitter Account",:class =>"form-control"%></td></tr>
+
+                                                  <!--<input type="text" class="form-control" name="twitter" placeholder="twitter Account "/>-->
+
+                                                </div>
+                                              </div>
+                                              <div class="form-group pull-right">
+                                                <div class="col-sm-8 ">
+
+
+                                                  <%=f.submit "update",:class=>"btn btn-primary"%>
+
+                                                  <!--<button type="submit" class="btn btn-danger" name="update" value="Update">Update</button>-->
+                                                </div>
+                                              </div>
+                                            </div>
+
+                                          </form>
+
+
+                                          <!--ends here-->
+                                          </div>
+                                          </div>
+                                          </div>
+
+
+                                          <!-- Step 3 -->
+                                          <div class="panel panel-default">
+                                            <div class="panel-heading">
+                                              <h4 class="panel-title"><a data-toggle="collapse" data-parent="#steps" href="#stepThree">Previous Experience</a></h4>
+                                            </div>
+                                            <div id="stepThree" class="panel-collapse collapse">
+                                              <div class="panel-body">
+                                                <!--Starts Here -->
+                                                <form id="Previous" method="post" class="form-horizontal" action="#">
+                                                  <div class="col-sm-12">
+                                                    <div class="form-group">
+                                                      <label class="col-sm-4 control-label">Select the Years of experience</label>
+                                                      <div class="col-sm-3">
+                                                        <input type="number" class="form-control" name="expyear"  id="expyear" placeholder="0 or above " />
+                                                      </div>
+                                                    </div>
+
+                                                    <div class="form-group" id="pcompanydetails">
+                                                      <label class="col-sm-4 control-label">Previous Company Details</label>
+                                                      <div class="col-sm-8">
+
+                                                        <%=personal.text_field :company_name,:placeholder=>"previous company Details",:class=>"form-control"%>
+
+                                                        <!--<textarea class="form-control" rows="5"  name="pcompanydetails" placeholder="previous company Details"></textarea>-->
+
+                                                      </div>
+                                                    </div>
+                                                    <div class="form-group" id="designation">
+                                                      <label class="col-sm-4 control-label"><abbr title="ex: software engineer, or analyst,designer">Designation as</abbr></label>
+                                                      <div class="col-sm-8">
+
+                                                        <%=personal.text_field :designation, :placeholder=>"software engineer , Designer or team lead ",:class=>"form-control"%>
+                                                        <!--<input type="text" class="form-control" name="designation"  placeholder="software engineer , Designer or team lead "/>-->
+
+                                                      </div>
+                                                    </div>
+                                                    <div class="form-group" id="skills">
+                                                      <label class="col-sm-4 control-label"><abbr title="like java ,ruby, bootstrap">Skills obtained</abbr></label>
+                                                      <div class="col-sm-8">
+                                                        <input type="text" class="form-control" name="skills"   placeholder="Skills obtained java, ruby, js,etc"/>
+
+                                                      </div>
+                                                    </div>
+                                                    <div class="form-group pull-right">
+                                                      <div class="col-sm-8 ">
+
+
+                                                        <%=f.submit "update",:class=>"btn btn-primary"%>
+
+                                                        <!--<button type="submit" class="btn btn-default" name="update" value="Update">Update</button>-->
+                                                      </div>
+                                                    </div>
+
+                                                  </div>
+
+                                                </form>
+                                                <!--Ends here-->
+                                              </div>
+                                            </div>
+                                          </div>
+                                          <!--step 4-->
+
+
+
+                                          <div class="panel panel-warning">
+                                            <div class="panel-heading" >
+                                              <h4 class="panel-title"><a data-toggle="collapse" data-parent="#steps" href="#stepFour">Qualification Details</a></h4>
+                                            </div>
+                                            <div id="stepFour" class="panel-collapse collapse">
+                                              <div class="panel-body">
+                                                <form id="qualification" method="post" class="form-horizontal" action="#">
+                                                  <div class="col-sm-12">
+                                                    <div class="form-group">
+                                                      <label class="col-sm-4 control-label">Higest Qualification Obtained</label>
+                                                      <div class="col-sm-5">
+                                                        <select name="hquali"  id="hquali" class="form-control">
+                                                          <option value=" ">--select qualifications--</option>
+                                                          <option value="pg">P.G(Post Graduate)</option>
+                                                          <option value="ug"> U.G(Under Graduate)</option>
+                                                        </select>
+                                                      </div>
+                                                    </div>
+                                                  </div>
+
+                                                  <!-- pg -->
+                                                  <div id="pg">
+                                                    <div class="col-sm-12">
+                                                      <hr class="alert-danger">
+                                                    </div>
+                                                    <div class="col-sm-12">
+                                                      <div class="col-sm-6">
+                                                        <div class="form-group" >
+                                                          <label class="col-sm-4 control-label text-info">PG Branch Taken</label>
+                                                          <div class="col-sm-8">
+
+                                                            <%=personal.text_field :pg,:placeholder=>"ex: CS,EE,ME etc ",:class=>"form-control"%>
+
+                                                            <!--<input type="text" class="form-control" name="pgbranch"  id="pg_branch" placeholder="ex: CS,EE,ME etc "/>-->
+                                                          </div>
+                                                        </div>
+                                                      </div>
+                                                      <div class="col-sm-6">
+                                                        <div class="form-group" >
+                                                          <label class="col-sm-4 control-label">P.G Year Pass</label>
+                                                          <div class="col-sm-8">
+
+                                                            <%=personal.text_field :pg_year,:placeholder=>"ex: CS,EE,ME etc ",:class=>"form-control"%>
+
+
+                                                            <!--<input type="text" class="form-control" name="pgyear"  id="pgyear" placeholder="2016,2015,"/>-->
+                                                          </div>
+                                                        </div>
+                                                      </div>
+
+                                                    </div>
+                                                  </div>
+
+                                                  <!-- ug -->
+                                                  <div id="ug">
+                                                    <div class="col-sm-12">
+                                                      <hr class="alert-danger">
+                                                    </div>
+                                                    <div class="col-sm-12">
+                                                      <div class="col-sm-6">
+                                                        <div class="form-group" >
+                                                          <label class="col-sm-4 control-label text-success">U.G Branch Taken</label>
+                                                          <div class="col-sm-8">
+                                                            <%=personal.text_field :ug,:placeholder=>"ex: VLSI,CAD/CAM etc ",:class=>"form-control"%>
+
+                                                            <!--<input type="text" class="form-control" name="ugbranch"   placeholder="ex: CS,EE,ME etc "/>-->
+                                                          </div>
+                                                        </div>
+                                                      </div>
+                                                      <div class="col-sm-6">
+                                                        <div class="form-group" >
+                                                          <label class="col-sm-4 control-label">U.G Year Passed</label>
+                                                          <div class="col-sm-8">
+
+                                                            <%=personal.text_field :ug_year,:placeholder=>"2016,2015 ",:class=>"form-control"%>
+
+                                                            <!--<input type="text" class="form-control" name="ugyear"   placeholder="2016,2015,"/>-->
+                                                          </div>
+                                                        </div>
+                                                      </div>
+                                                    </div>
+                                                  </div>
+
+
+                                                  <!-- Diploma-->
+                                                  <div id="diploma">
+                                                    <div class="col-sm-12">
+                                                      <hr class="alert-danger">
+                                                    </div>
+                                                    <div class="col-sm-12">
+                                                      <div class="col-sm-6">
+                                                        <div class="form-group" >
+                                                          <label class="col-sm-4 control-label text-warning">diploma Branch Taken</label>
+                                                          <div class="col-sm-8">
+
+                                                            <%=personal.text_field :diploma,:placeholder=>"CS,EE,ME etc ",:class=>"form-control"%>
+
+                                                            <!--<input type="text" class="form-control" name="dipbranch"  id="dip_branch" placeholder="ex: CS,EE,ME etc "/>-->
+                                                          </div>
+                                                        </div>
+                                                      </div>
+                                                      <div class="col-sm-6">
+                                                        <div class="form-group" >
+                                                          <label class="col-sm-4 control-label">Diploma Year Passed</label>
+                                                          <div class="col-sm-8">
+
+                                                            <%=personal.text_field :diploma_year,:placeholder=>"2006,2005 ",:class=>"form-control"%>
+
+                                                            <!--<input type="text" class="form-control" name="dipyear"  id="dipyear" placeholder="2016,2015,"/>-->
+                                                          </div>
+                                                        </div>
+                                                      </div>
+
+                                                    </div>
+                                                  </div>
+
+                                                  <!-- class 12-->
+                                                  <div id="class12">
+                                                    <div class="col-sm-12">
+                                                      <hr class="alert-danger">
+                                                    </div>
+                                                    <div class="col-sm-12">
+                                                      <div class="col-sm-6">
+                                                        <div class="form-group" >
+                                                          <label class="col-sm-4 control-label text-danger">class 12</label>
+                                                          <div class="col-sm-8">
+
+                                                            <%=personal.text_field :puc,:placeholder=>"ex: science Arts, Accounts etc  ",:class=>"form-control"%>
+
+                                                            <!--<input type="text" class="form-control" name="class12"  placeholder="ex: science Arts, Accounts etc "/>-->
+                                                          </div>
+                                                        </div>
+                                                      </div>
+                                                      <div class="col-sm-6">
+                                                        <div class="form-group" >
+                                                          <label class="col-sm-4 control-label">Year of passing 12</label>
+                                                          <div class="col-sm-8">
+
+                                                            <%=personal.text_field :puc_year,:placeholder=>"2006,2005  ",:class=>"form-control"%>
+                                                            <!--<input type="text" class="form-control" name="year12"   placeholder="2016,2015,"/>-->
+                                                          </div>
+                                                        </div>
+                                                      </div>
+
+                                                    </div>
+                                                  </div>
+
+                                                  <!-- class10-->
+                                                  <div id="class10">
+                                                    <div class="col-sm-12">
+                                                      <hr class="alert-danger">
+                                                    </div>
+                                                    <div class="col-sm-12">
+                                                      <div class="col-sm-6">
+                                                        <div class="form-group" >
+                                                          <label class="col-sm-4 control-label text-primary">class 10</label>
+                                                          <div class="col-sm-8">
+
+
+                                                            <%=personal.text_field :tenth,:placeholder=>"ex: CBSE or State boroard ",:class=>"form-control"%></td>
+
+                                                            <!--<input type="text" class="form-control" name="class10"  placeholder="ex: CBSE or State boroard "/>-->
+                                                          </div>
+                                                        </div>
+                                                      </div>
+                                                      <div class="col-sm-6">
+                                                        <div class="form-group" >
+                                                          <label class="col-sm-4 control-label">Year of passing 10</label>
+                                                          <div class="col-sm-8">
+                                                            <%=personal.text_field :tenth_year,:placeholder=>"2009,2010, ",:class=>"form-control"%>
+
+                                                            <!--<input type="text" class="form-control" name="year10"   placeholder="2016,2015,"/>-->
+                                                          </div>
+                                                        </div>
+                                                      </div>
+
+                                                      <div class="form-group pull-right">
+                                                        <div class="col-sm-8 ">
+
+                                                          <%=f.submit "update",:class=>"btn btn-success"%>
+
+                                                          <!--<button type="submit" class="btn btn-success" name="update" value="Update">Update</button>-->
+                                                        </div>
+                                                      </div>
+                                                    </div>
+
+                                                  </div>
+
+                                                </form>
+                                              </div>
+                                            </div>
+                                          </div>
+                                          </div>
+                                          </div>
+                                          </div>
+                                          </div>
+                                          </div>
+                                          <!-- /#page-content-wrapper -->
+                                          </div>
+                                          <!-- /#wrapper -->
+                                          <!-- jQuery -->
+                                          <!--Vendor library file-->
+                                          <script>
+                                            $(document).ready(function(){
+                                              $('#doj').datepicker({
+                                                format: "dd/mm/yyyy"
+                                              });
+                                              $('#dob').datepicker({
+                                                viewMode:'years',
+                                                format: "dd/mm/yyyy"
+                                              });
+                                              $('#doa').datepicker({
+                                                viewMode:'years',
+                                                format: "dd/mm/yyyy"
+                                              });
+                                            });
+                                          </script>
+
+
+
+
+                                      <%end%>
+                                      <!--ends here-->
+                            <%end%>
+
+
+
+                            <script src ="../javascripts/bootstrap.min.js"></script>
+                            <script src="../javascripts/sidemenu.js"></script>
+                            </body>
+</html>

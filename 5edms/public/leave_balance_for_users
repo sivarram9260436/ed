@@ -1,0 +1,10 @@
+Employee Name,Leave Type,Total Leaves,Total Leave Balance,Availed,balance
+"",Sick,5.0,5.0,0.0,5.0
+"",Privileged,15.0,15.0,0.0,15.0
+"",Breavement,7.0,7.0,0.0,7.0
+"",Study Leave,7.0,7.0,0.0,7.0
+"",Time Off,5.0,5.0,0.0,5.0
+"",Maternity,84.0,84.0,0.0,84.0
+"",Paternity,7.0,7.0,0.0,7.0
+"",Optional,5.0,5.0,0.0,5.0
+"",Comp Off,0.0,0.0,0.0,0.0

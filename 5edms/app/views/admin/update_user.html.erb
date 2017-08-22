@@ -1,0 +1,31 @@
+<h1 >Register new user</h1>
+
+<% if flash[:notice]%> 
+
+<div class="flash_notice"><%= flash[:notice]%> </div>
+
+<% end %>
+<%=form_for(@employee_detail,:url => {:controller=>"admin",:action=>"new_role"}) do |f| %>
+<div id=form>
+<table cellspacing="10">
+  <tr>
+      <td style="font-size:1.2em">Title*:</td><td><%=f.select :title, ["Mr","Mrs","Ms"]%></td>
+  </tr>
+	<tr>
+		 <td><%=f.label :UserName%>:</td>
+		 <td><%=f.text_field :official_mailid,:size=>20%></td>
+	</tr>
+  
+  <tr>
+     <td><%=f.label :Role%>:</td>
+     <td><%=f.select :role_id,Role.all.collect{|aa| [aa.role_name,aa.id]}%></td>
+  </tr>   
+  <tr>
+     <td></td><td class="align">	<%=f.submit "Save"%></td>
+  </tr>
+<%end%>
+</table>
+<table>
+<%= button_to "back",:controller=>"select",:action=>"view_employee_leave" %>
+</table>
+</div>

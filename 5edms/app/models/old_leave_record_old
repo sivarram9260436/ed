@@ -1,0 +1,26 @@
+class LeaveRecord < ActiveRecord::Base
+ has_one :leave_type
+ #has_one :leave_detail
+ belongs_to :employee_detail
+ belongs_to :personal_detail
+  validates :from_date, :reason, :presence => { :message => "should not be blank" }
+  validates :to_date, :presence => { :message => "should not be blank" }
+  
+  
+   
+  validate :leave_record_validation   
+    
+   
+   def leave_record_validation
+      
+     if not self.from_date.blank? and not self.to_date.blank?    
+       errors[:base] << ("To date should be greater than from date") if self.from_date > self.to_date
+       #errors[:base] <<("Date is not available") if self.from_date < Date.today       
+     end
+   end
+   
+
+ 
+  
+  
+ end

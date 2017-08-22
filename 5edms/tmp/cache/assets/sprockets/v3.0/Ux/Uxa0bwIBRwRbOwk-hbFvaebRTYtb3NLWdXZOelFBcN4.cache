@@ -1,0 +1,18 @@
+{:uriI"Ÿfile://app/assets/bootstrap/docs/_includes/getting-started/translations.html?type=text/html&id=d4f401e1d2db32287a02d0ee0e70ecd337ab7d1d1c5078e5b3e219bd07633eae:ET:load_pathI"app/assets/bootstrap;T:filenameI"Japp/assets/bootstrap/docs/_includes/getting-started/translations.html;T:	nameI"0docs/_includes/getting-started/translations;T:logical_pathI"5docs/_includes/getting-started/translations.html;T:content_typeI"text/html;T:sourceI"¯<div class="bs-docs-section">
+  <h1 id="translations" class="page-header">Translations</h1>
+
+  <p class="lead">Community members have translated Bootstrap's documentation into various languages. None are officially supported and they may not always be up to date.</p>
+  <ul>
+    {% for language in site.data.translations %}
+      <li><a href="{{ language.url }}" hreflang="{{ language.code }}">{{ language.description }} ({{ language.name }})</a></li>
+    {% endfor %}
+  </ul>
+  <p><strong class="text-danger">We don't help organize or host translations, we just link to them.</strong></p>
+  <p>Finished a new or better translation? Open a pull request to add it to our list.</p>
+</div>
+;T:metadata{	:dependencieso:Set:
+@hash}
+I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"2processors:type=text/html&file_type=text/html;TTI"Xfile-digest://app/assets/bootstrap/docs/_includes/getting-started/translations.html;TTF:charsetI"
+utf-8;F:digest"%şâ[‹-ÙÓ“¾‰j·¸7UÕ¿ç†ÃTBÙ.¦8(Ç{:lengthi¯:dependencies_digest"%‚è“†i5æu+8m
+¥Ü°Su£N­e~).­"‘Ï:idI"Ed4f401e1d2db32287a02d0ee0e70ecd337ab7d1d1c5078e5b3e219bd07633eae;F:
+mtimel+œ5–W

@@ -1,0 +1,50 @@
+<% @employee_list = @employee_list.paginate(:page => params[:page], :per_page => 20)%>
+<h3>Listing all employees Leave Balance..</h3>
+
+<table border="1" align="center" cellpadding="10" style="border-collapse: collapse;">
+	<tr>
+
+		<th>Employee</th>
+		<th>SICK</th>
+		<th>PRIVILEGED</th>
+		<th>BREAVEMNT</th>
+		<th>STUDY LEAVE</th>
+		<th>TIME OFF </th>
+		<th>MATERNITY</th>
+		<th>PATERNITY</th>
+		<th>OPTIONAL</th>
+		<th>COMP OFF</th>
+	</tr>
+
+	<%@employee_list.each do |p|%>
+	<tr class="<%= cycle('odd', 'even') %>">
+		<td> <%if p.emp_name == nil%>
+		<%= link_to p.official_mailid, :controller=>"select", :action=>"employee_new_leave_balance",:employee_detail_id=>p.id %>
+		<%else%>
+
+		<%= link_to p.emp_name, :controller=>"select", :action=>"employee_new_leave_balance",:employee_detail_id=>p.id %>
+		<%end%> </td>
+		<td> <% @leave=LeaveDetail.where("employee_detail_id =? and leave_type_id=? and year=?",p.id,1,Time.now.year)%>
+		<%= @leave.first.balance unless @leave.blank?%> </td>
+		<td> <% @leave=LeaveDetail.where("employee_detail_id =? and leave_type_id=? and year=?",p.id,2,Time.now.year)%>
+		<%= @leave.first.balance unless @leave.blank?%> </td>
+		<td> <% @leave=LeaveDetail.where("employee_detail_id =? and leave_type_id=? and year=?",p.id,3,Time.now.year)%>
+		<%= @leave.first.balance unless @leave.blank?%> </td>
+		<td> <% @leave=LeaveDetail.where("employee_detail_id =? and leave_type_id=? and year=?",p.id,4,Time.now.year)%>
+		<%= @leave.first.balance unless @leave.blank?%> </td>
+		<td> <% @leave=LeaveDetail.where("employee_detail_id =? and leave_type_id=? and year=?",p.id,5,Time.now.year)%>
+		<%= @leave.first.balance unless @leave.blank?%> </td>
+		<td> <% @leave=LeaveDetail.where("employee_detail_id =? and leave_type_id=? and year=?",p.id,6,Time.now.year)%>
+		<%= @leave.first.balance unless @leave.blank?%> </td>
+		<td> <% @leave=LeaveDetail.where("employee_detail_id =? and leave_type_id=? and year=?",p.id,7,Time.now.year)%>
+		<%= @leave.first.balance unless @leave.blank?%> </td>
+		<td> <% @leave=LeaveDetail.where("employee_detail_id =? and leave_type_id=? and year=?",p.id,8,Time.now.year)%>
+		<%= @leave.first.balance unless @leave.blank?%> </td>
+		<td> <% @leave=LeaveDetail.where("employee_detail_id =? and leave_type_id=? and year=?",p.id,9,Time.now.year)%>
+		<%= @leave.first.balance unless @leave.blank?%> </td>
+
+	</tr>
+	<%end%>
+
+</table>
+<%= will_paginate @employee_list, { :previous_label => "" ,:next_label => "" ,:inner_window => "2"} %>

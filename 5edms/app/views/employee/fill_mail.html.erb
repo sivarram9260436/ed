@@ -1,0 +1,20 @@
+<%= form_tag(:controller=>"employee",:action=> "add_leaves") %>
+
+<table cellspacing="8">
+  <div class="flash_notice">
+    <%= flash[:notice]%>
+  </div>
+  <tr>
+    <td>Employee MailID*:</td>
+    <td><%=text_field_tag 'official_mailid'%></td>
+  </tr>
+  <tr>
+    <td>No.of days</td>
+    <td><%= number_field_tag "days", nil, in:1..2  %></td>
+  </tr>
+  <tr>
+    <td><%= submit_tag 'Add Compoff'%></td>
+  </tr>
+
+</table>
+

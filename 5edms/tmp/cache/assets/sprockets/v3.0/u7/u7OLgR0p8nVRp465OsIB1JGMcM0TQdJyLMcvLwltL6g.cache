@@ -1,0 +1,11 @@
+{:uriI"|file://app/assets/stylesheets/robots.txt?type=text/plain&id=2b98356a0d0126aadcb22bf9c330104a0e3e023fae8fd5662a7992929b691011:ET:load_pathI"app/assets/stylesheets;T:filenameI"&app/assets/stylesheets/robots.txt;T:	nameI"robots;T:logical_pathI"robots.txt;T:content_typeI"text/plain;T:sourceI"Ì# See http://www.robotstxt.org/wc/norobots.html for documentation on how to use the robots.txt file
+#
+# To ban all spiders from the entire site uncomment the next two lines:
+# User-Agent: *
+# Disallow: /
+;T:metadata{	:dependencieso:Set:
+@hash}
+I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"4processors:type=text/plain&file_type=text/plain;TTI"4file-digest://app/assets/stylesheets/robots.txt;TTF:charsetI"
+utf-8;F:digest"%]qoÉç_ÑÙ/n Û£ü…úû¤²ÒÄ6â2Ëµ,/:lengthiÌ:dependencies_digest"%§:Çc<ý
+5ëéÞ¨M³G>–ñ0³õ-Žë._e:idI"E2b98356a0d0126aadcb22bf9c330104a0e3e023fae8fd5662a7992929b691011;F:
+mtimel+ðþW

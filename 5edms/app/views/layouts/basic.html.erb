@@ -1,0 +1,119 @@
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Employee Leave Management Software</title>
+<link rel="stylesheet" type="text/css" href="/stylesheets/mystyle.css" />
+<%=stylesheet_link_tag("globalstyle")%>
+</head>
+<body>
+<div id="wrapper">
+<div id="top-menu">
+<div id="account">
+<ul>
+<li>
+<a class="logout" href="/employee/logout">Signout</a>
+</li>
+</ul>
+</div>
+<ul>
+<li>
+<a class="home" href="/employee/welcome">Home</a>
+</li>
+<li>
+<a class="projects" href="/projects">Projects</a>
+</li>
+</ul>
+</div><!--topmenu-->
+<div id="wrapper_header">
+<div class="header">
+<div class="header_left">
+<!-- <img src="/home/kanagaraju/Downloads/kreatio_logo.jpg" alt="Kreatio-logo"height=60; width =120> -->
+<%=image_tag("/images/kreatio_logo.jpg", :height => "8%", :width => "70%")%>
+</div>
+<div class="header_right">
+<h1>KREATIO EDMS</h1>
+</div>
+</div>
+</div><!--header-->
+<div id="mainmenu" class="menucontainer">
+<ul class="menulist" cellspacing="20">
+<a class="contact" title="AboutUs" href="/">AboutUs</a>
+</div><!--mainmenu-->
+
+<div id="container">
+<div class="left_content">
+  <div class="emp_info">
+     <h1>Employee data</h1>
+<ul>
+<li>
+<a class="contact" title="updateprofile" href="/employee/new">Update</a>
+</li>
+<li>
+<a class="contact" title="ViewProfile" href="/employee/index">View&Edit</a>
+</li>
+</ul>
+  </div>
+<div class="leave_info">
+     <h1>leave data</h1>
+<ul>
+<li>
+<a class="contact" title="ApplyLeave" href="/select/apply">ApplyLeave</a>
+</li>
+<li>
+<a class="contact" title="LeaveCancellation" href="/select/cancel">LeaveCancel</a>
+</li>
+<li>
+<a class="contact" title="ViewLeaveApproved" href="/select/view_approved">LeaveApproved</a>
+</li>
+<li>
+<a class="contact" title="ViewLeaveStatus" href="/select/list">LeaveStatus</a>
+</li>
+<li>
+<a class="contact" title="ViewLeaveBalance" href="/select/select_year">LeaveBalance</a>
+</li>
+</ul>
+</div>
+<%if session[:role]=="admin"%>
+<div class="admin_info">
+<h1>Admin Controls</h1>
+<ul>
+<li>
+<a class="contact" title="Leave" href="/select/list_all">LeaveAppliedList</a>
+</li>
+</ul>
+</div>
+<%end%>
+<%if session[:role]=="hr"%>
+<div class= "hr_info">
+<h1>Hr Controls</h1>
+<ul>
+<li>
+<a class="contact" title="HR" href="/admin/new">AddUser</a>
+</li>
+
+
+
+
+</ul>
+</div>
+<%end%>
+
+  
+<div class="doc_info"> 
+ <h1></h1>
+<ul>        
+<li>
+<a class="contact" title="ViewDocuments" href="/select/documents">Documents</a>
+</li>
+</ul>
+</div>
+</div><!--left_content-->
+<div class="right_content">
+<!--<h1>Welcome to Employee And Leave Management Software</h1>-->
+<%= yield %>
+</div><!--right_content-->
+</div><!--container-->
+
+<div id="footer">Employee & Leave Management Software </div>
+</div><!--wrapper-->
+</body>        
+</html>

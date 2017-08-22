@@ -1,0 +1,42 @@
+{:uriI"ãfile://app/assets/bootstrap/docs/_includes/nav/main.html?type=text/html&id=871bcc5039551dff3674c28f00ec2a5a4c60221cc50f5906219a0fbc4d8f0084:ET:load_pathI"app/assets/bootstrap;T:filenameI"6app/assets/bootstrap/docs/_includes/nav/main.html;T:	nameI"docs/_includes/nav/main;T:logical_pathI"!docs/_includes/nav/main.html;T:content_typeI"text/html;T:sourceI"ﬁ<header class="navbar navbar-static-top bs-docs-nav" id="top">
+  <div class="container">
+    <div class="navbar-header">
+      <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#bs-navbar" aria-controls="bs-navbar" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a href="../" class="navbar-brand">Bootstrap</a>
+    </div>
+    <nav id="bs-navbar" class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+        <li{% if page.slug == "getting-started" %} class="active"{% endif %}>
+          <a href="../getting-started/">Getting started</a>
+        </li>
+        <li{% if page.slug == "css" %} class="active"{% endif %}>
+          <a href="../css/">CSS</a>
+        </li>
+        <li{% if page.slug == "components" %} class="active"{% endif %}>
+          <a href="../components/">Components</a>
+        </li>
+        <li{% if page.slug == "js" %} class="active"{% endif %}>
+          <a href="../javascript/">JavaScript</a>
+        </li>
+        <li{% if page.slug == "customize" %} class="active"{% endif %}>
+          <a href="../customize/">Customize</a>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="{{ site.themes }}" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Themes')">Themes</a></li>
+        <li><a href="{{ site.expo }}" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Expo');">Expo</a></li>
+        <li><a href="{{ site.blog }}" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Blog');">Blog</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+;T:metadata{	:dependencieso:Set:
+@hash}
+I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"2processors:type=text/html&file_type=text/html;TTI"Dfile-digest://app/assets/bootstrap/docs/_includes/nav/main.html;TTF:charsetI"
+utf-8;F:digest"%¿o^∑”"„´ç€‘Ù‹Ω	âvá€√4“+ÕaüÈmñ!:lengthiﬁ:dependencies_digest"%4°l/£ÈÓ…z«'OÅìµ·’D<Ú"EÃg¢–¿ï°:idI"E871bcc5039551dff3674c28f00ec2a5a4c60221cc50f5906219a0fbc4d8f0084;F:
+mtimel+ú5ñW

@@ -1,0 +1,24 @@
+<style type="text/css">
+    th
+    {padding:3px;background-color:#EBF3DB;}
+</style>
+<table  border="1" align="left" style="border-collapse: collapse;" class = "leave_status_list">
+  <tr>
+  <th>Employee Name</th>
+  <th>Actual D.O.B</th>
+  <th>Official D.O.B</th>
+  <th>Anniversary Date</th>
+  <th>Join Date</th>
+  </tr>
+  <%@employee.each do |emp|%>
+      <tr>
+        <td><%=emp.official_mailid%></td>
+        <td><%=emp.personal_detail.p_dob if emp.personal_detail %></td>
+        <td><%=emp.dob%></td>
+        <td><%=emp.personal_detail.anniversary_date if emp.personal_detail%></td>
+        <td><%=emp.date_of_join%></td>
+      </tr>
+  <% end%>
+
+</table>
+

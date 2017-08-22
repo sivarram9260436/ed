@@ -1,0 +1,43 @@
+<% @leave_records = @leave_record.paginate(:page => params[:page], :per_page => 25)%>
+<style type="text/css">
+	table, td, th {
+	}
+	th {
+		padding: 3px;
+		background-color: #CBCBCB;
+	}
+</style>
+
+<h3>LISTING LEAVE DETAILS..</h3>
+
+<table border="1" align="center" cellpadding="2" style="border-collapse: collapse;">
+	<tr>
+		<th>EMP NAME</th>
+		<th>LEAVE TYPE</th>
+		<th>FROM DATE</th>
+		<th>TO DATE</th>
+		<th>REASON</th>
+		<th>NO.OF DAYS</th>
+		<th>STATUS</th>
+	</tr>
+	<% @leave_records.order("from_date desc").each do |t| %>
+	<tr class="<%= cycle('odd', 'even') %>">
+
+		<td><%= t.employee_detail.emp_name%></td>
+		<td><%= LeaveType.find(t.leave_type_id).leave_types%></td>
+		<td><%= t.from_date%></td>
+		<td><%= t.to_date%></td>
+		<td><%= t.reason%></td>
+		<td><%= t.no_of_days%></td>
+        <% if t.status == "Pending" %>
+            <td><%= link_to 'Approve', "/select/approve?emp_id=#{t.employee_detail_id}&leave_type_id=#{t.leave_type_id}&leave_record_id=#{t.id}&no_of_days=#{t.no_of_days}&year=#{t.year}&flag=hr_app", :method =>"approve", :confirm=>"Are you sure want to Approve this leave?"%>/
+            <%= link_to 'Cancel', "/select/cancel_leave?id=#{t.id}&employee_detail_id=#{t.employee_detail_id}&leave_type_id=#{t.leave_type_id}&leave_record_id=#{t.id}&no_of_days=#{t.no_of_days}&year=#{t.year}&flag=hr&role=HR", :method =>"cancel_leave", :confirm=>"Are you sure want to Cancel this leave?"%>
+    <% else %>
+          <td><%= t.status%></td>
+        <% end %>
+	</tr>
+	<% end %>
+
+</table>
+<%= will_paginate @leave_records, { :previous_label => "" ,:next_label => "" ,:inner_window => "2"} %>
+

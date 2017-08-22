@@ -1,0 +1,12 @@
+{:uriI"˜file://app/assets/bootstrap/docs/_includes/getting-started/tools.html?type=text/html&id=9445d6357434162ae9c0f585891dcf70c43825e25501da7a4cc2235ea7a7b8bf:ET:load_pathI"app/assets/bootstrap;T:filenameI"Capp/assets/bootstrap/docs/_includes/getting-started/tools.html;T:	nameI")docs/_includes/getting-started/tools;T:logical_pathI".docs/_includes/getting-started/tools.html;T:content_typeI"text/html;T:sourceI"ş<div class="bs-docs-section">
+  <h1 id="tools" class="page-header">Tools</h1>
+
+  <h2 id="tools-bootlint">Bootlint</h2>
+  <p><strong><a href="https://github.com/twbs/bootlint">Bootlint</a></strong> is the official Bootstrap HTML <a href="http://en.wikipedia.org/wiki/Lint_(software)">linter</a> tool. It automatically checks for several common HTML mistakes in webpages that are using Bootstrap in a fairly "vanilla" way. Vanilla Bootstrap's components/widgets require their parts of the DOM to conform to certain structures. Bootlint checks that instances of Bootstrap components have correctly-structured HTML. Consider adding Bootlint to your Bootstrap web development toolchain so that none of the common mistakes slow down your project's development.</p>
+</div>
+;T:metadata{	:dependencieso:Set:
+@hash}
+I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"2processors:type=text/html&file_type=text/html;TTI"Qfile-digest://app/assets/bootstrap/docs/_includes/getting-started/tools.html;TTF:charsetI"
+utf-8;F:digest"%\jÇ—dä„i‡Ù`?
+ğ1À/0|ã³i?6¡˜:lengthiş:dependencies_digest"%Më}?ö±E*j4Èy¥ÜË©7C‚'¤*~ºb:idI"E9445d6357434162ae9c0f585891dcf70c43825e25501da7a4cc2235ea7a7b8bf;F:
+mtimel+œ5–W

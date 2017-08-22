@@ -1,0 +1,21 @@
+<% if flash[:notice]%> 
+<div class="flash_notice"><%= flash[:notice]%> </div>
+<% end %>
+<%=form_tag(:controller=>"select",:action=>"update_leave")%>
+<table>
+    <tr>
+        <td>Email:</td>
+	<% @mailid.each do |p|%>
+        <td><%=text_field_tag :email,p.official_mailid%></td>
+	<%end%>
+    <tr>
+    <% @leav.each do |leave|%>
+    <tr>
+
+        <td><%= LeaveType.find(leave.leave_type_id).leave_types%>:</td>
+        <td><%= text_field :leave,"#{leave.leave_type_id}",:value=>leave.total_leave_balance,:size => 2%></td>
+    </tr>       
+    <%end%>
+</table>    
+<%=submit_tag "Update"%>
+<%= button_to "back",:controller=>"select", :action=>"employee_new_leave_balance" %>

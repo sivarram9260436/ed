@@ -1,0 +1,47 @@
+{:uriI"îfile://app/assets/bootstrap/docs/_includes/components/labels.html?type=text/html&id=8eab441a58546742fa0923eac807d0defd88d31542b503b2e865c7d97007daa2:ET:load_pathI"app/assets/bootstrap;T:filenameI"?app/assets/bootstrap/docs/_includes/components/labels.html;T:	nameI"%docs/_includes/components/labels;T:logical_pathI"*docs/_includes/components/labels.html;T:content_typeI"text/html;T:sourceI"Ú<div class="bs-docs-section">
+  <h1 id="labels" class="page-header">Labels</h1>
+
+  <h2>Example</h2>
+  <div class="bs-example" data-example-id="labels-in-headings">
+    <h1>Example heading <span class="label label-default">New</span></h1>
+    <h2>Example heading <span class="label label-default">New</span></h2>
+    <h3>Example heading <span class="label label-default">New</span></h3>
+    <h4>Example heading <span class="label label-default">New</span></h4>
+    <h5>Example heading <span class="label label-default">New</span></h5>
+    <h6>Example heading <span class="label label-default">New</span></h6>
+  </div>
+{% highlight html %}
+<h3>Example heading <span class="label label-default">New</span></h3>
+{% endhighlight %}
+
+  <h2>Available variations</h2>
+  <p>Add any of the below mentioned modifier classes to change the appearance of a label.</p>
+  <div class="bs-example" data-example-id="label-variants">
+    <span class="label label-default">Default</span>
+    <span class="label label-primary">Primary</span>
+    <span class="label label-success">Success</span>
+    <span class="label label-info">Info</span>
+    <span class="label label-warning">Warning</span>
+    <span class="label label-danger">Danger</span>
+  </div>
+{% highlight html %}
+<span class="label label-default">Default</span>
+<span class="label label-primary">Primary</span>
+<span class="label label-success">Success</span>
+<span class="label label-info">Info</span>
+<span class="label label-warning">Warning</span>
+<span class="label label-danger">Danger</span>
+{% endhighlight %}
+
+  <div class="bs-callout bs-callout-info" id="callout-labels-inline-block">
+    <h4>Have tons of labels?</h4>
+    <p>Rendering problems can arise when you have dozens of inline labels within a narrow container, each containing its own <code>inline-block</code> element (like an icon). The way around this is setting <code>display: inline-block;</code>. For context and an example, <a href="https://github.com/twbs/bootstrap/issues/13219">see #13219</a>.</p>
+  </div>
+</div>
+;T:metadata{	:dependencieso:Set:
+@hash}
+I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"2processors:type=text/html&file_type=text/html;TTI"Mfile-digest://app/assets/bootstrap/docs/_includes/components/labels.html;TTF:charsetI"
+utf-8;F:digest"%£{(h™k‡ﬁÕN∫{˝ﬁ™†Ä®)«∫äﬁÚ
+i:lengthiÚ:dependencies_digest"%Hä
+¿⁄∂hÀ^Ûe2Úì±Ö$%ã>D-3ƒÔê«Ê:idI"E8eab441a58546742fa0923eac807d0defd88d31542b503b2e865c7d97007daa2;F:
+mtimel+ú5ñW

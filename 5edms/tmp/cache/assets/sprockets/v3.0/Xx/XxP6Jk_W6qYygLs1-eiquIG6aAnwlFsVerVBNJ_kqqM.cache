@@ -1,0 +1,21 @@
+{:uriI"‘file://app/assets/bootstrap/docs/_includes/js/transitions.html?type=text/html&id=1e7e339b1baa4ac97b49d571a9a023600a691a2f407b9096d41afe80db2a0b08:ET:load_pathI"app/assets/bootstrap;T:filenameI"<app/assets/bootstrap/docs/_includes/js/transitions.html;T:	nameI""docs/_includes/js/transitions;T:logical_pathI"'docs/_includes/js/transitions.html;T:content_typeI"text/html;T:sourceI"Ë<div class="bs-docs-section">
+  <h1 id="transitions" class="page-header">Transitions <small>transition.js</small></h1>
+
+  <h2>About transitions</h2>
+  <p>For simple transition effects, include <code>transition.js</code> once alongside the other JS files. If you're using the compiled (or minified) <code>bootstrap.js</code>, there is no need to include this&mdash;it's already there.</p>
+
+  <h2>What's inside</h2>
+  <p>Transition.js is a basic helper for <code>transitionEnd</code> events as well as a CSS transition emulator. It's used by the other plugins to check for CSS transition support and to catch hanging transitions.</p>
+
+  <h2>Disabling transitions</h2>
+  <p>Transitions can be globally disabled using the following JavaScript snippet, which must come after <code>transition.js</code> (or <code>bootstrap.js</code> or <code>bootstrap.min.js</code>, as the case may be) has loaded:</p>
+{% highlight js %}
+$.support.transition = false
+{% endhighlight %}
+</div>
+;T:metadata{	:dependencieso:Set:
+@hash}
+I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"2processors:type=text/html&file_type=text/html;TTI"Jfile-digest://app/assets/bootstrap/docs/_includes/js/transitions.html;TTF:charsetI"
+utf-8;F:digest"%­õ«áÔ°V[;Ê–¤5](ïjà#íşQ§Ká”ë:lengthiË:dependencies_digest"%¾È
+ÃÀüÆŞî’Ì-ë»HiGıØ5©¿·!.2j=.:idI"E1e7e339b1baa4ac97b49d571a9a023600a691a2f407b9096d41afe80db2a0b08;F:
+mtimel+œ5–W

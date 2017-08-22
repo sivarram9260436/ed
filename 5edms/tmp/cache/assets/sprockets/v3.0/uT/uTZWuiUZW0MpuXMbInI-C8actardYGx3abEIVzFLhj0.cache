@@ -1,0 +1,14 @@
+{:uriI"file://app/assets/bootstrap/docs/robots.txt?type=text/plain&id=ba1efbc847b6a1f2511942f25749685a1b45f0ae8896abb3df424bdcfff9440f:ET:load_pathI"app/assets/bootstrap;T:filenameI")app/assets/bootstrap/docs/robots.txt;T:	nameI"docs/robots;T:logical_pathI"docs/robots.txt;T:content_typeI"text/plain;T:sourceI"{---
+---
+
+# www.robotstxt.org/
+
+# Allow crawling of all content
+User-agent: *
+Disallow:
+Sitemap: {{ site.url }}/sitemap.xml
+;T:metadata{	:dependencieso:Set:
+@hash}
+I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"4processors:type=text/plain&file_type=text/plain;TTI"7file-digest://app/assets/bootstrap/docs/robots.txt;TTF:charsetI"
+utf-8;F:digest"%Ñ’­?m3ô•‚üÈ-êkœ­ðÙ š©$ã¡:lengthi{:dependencies_digest"%ñV­yIz„ëø\Ó{…J!‰<jšŸœ<ýÔQZñ':idI"Eba1efbc847b6a1f2511942f25749685a1b45f0ae8896abb3df424bdcfff9440f;F:
+mtimel+œ5–W

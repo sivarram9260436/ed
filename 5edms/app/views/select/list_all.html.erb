@@ -1,0 +1,45 @@
+<style type="text/css">
+table,td,th
+{
+}
+th
+{
+padding:3px;
+background-color:#CBCBCB;
+}
+</style>
+
+	<h3>LISTING LEAVE DETAILS..</h3>	
+	
+		
+  <table border="1" align="center" cellpadding="2" style="border-collapse: collapse;">
+     <tr>
+       <th>EMP NAME</th>
+       <th>LEAVE TYPE</th>
+       <th>FROM DATE</th>
+       <th>TO DATE</th>
+       <th>REASON</th>
+       <th>NO.OF DAYS</th> 
+       <th>STATUS</th>
+    </tr>
+   <% @leave_record.each do |t| %>
+   <tr class="<%= cycle('odd', 'even') %>"> 
+       <td><%=t.employee_detail.emp_name%></td>
+       <td><%=LeaveType.find(t.leave_type_id).leave_types%></td>
+       <td><%=t.from_date%></td>
+       <td><%=t.to_date%></td>
+       <td><%=t.reason%></td>
+       <td><%=t.no_of_days%></td>
+    <% if(t.status=="approved")%>
+        <td>Approved/<%= link_to 'Cancel', "/select/cancel_leave?id=#{t.id}&employee_detail_id=#{t.employee_detail_id}&leave_type_id=#{t.leave_type_id}&no_of_days=#{t.no_of_days}&year=#{t.year}&role=RM", :method=>"cancel_leave", :method => "cancel_leave", :confirm => "Aru you want to cancel this approved leave?"%>
+		<%else%>
+          <td><%= link_to 'cancel', "/select/cancel_leave?id=#{t.id}&employee_detail_id=#{t.employee_detail_id}&leave_type_id=#{t.leave_type_id}&no_of_days=#{t.no_of_days}&year=#{t.year}&role=RM", :method=>"cancel_leave", :confirm => "Are you sure want to cancel this leave?" %>/
+              <%= link_to 'Approve', "/select/approve?emp_id=#{t.employee_detail_id}&leave_type_id=#{t.leave_type_id}&leave_record_id=#{t.id}&no_of_days=#{t.no_of_days}&year=#{t.year}", :method=>"approve", :confirm => "Are you sure want to approve this leave?"%></td>
+		<%end%>
+    </tr>  
+  <% end %>
+</table>
+
+
+
+

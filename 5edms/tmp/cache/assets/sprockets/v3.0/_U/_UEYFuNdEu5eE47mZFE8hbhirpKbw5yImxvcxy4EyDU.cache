@@ -1,0 +1,27 @@
+{:uriI"ƒfile://app/assets/bootstrap/docs/javascript.html?type=text/html&id=603f6df1aa8e77af97e79c8d5ef202286ef4b82b3a1e9c2b119f1430400649b3:ET:load_pathI"app/assets/bootstrap;T:filenameI".app/assets/bootstrap/docs/javascript.html;T:	nameI"docs/javascript;T:logical_pathI"docs/javascript.html;T:content_typeI"text/html;T:sourceI">---
+layout: default
+title: JavaScript
+slug: js
+lead: "Bring Bootstrap's components to life with over a dozen custom jQuery plugins. Easily include them all, or one by one."
+---
+
+
+{% include js/overview.html %}
+{% include js/transitions.html %}
+{% include js/modal.html %}
+{% include js/dropdowns.html %}
+{% include js/scrollspy.html %}
+{% include js/tabs.html %}
+{% include js/tooltips.html %}
+{% include js/popovers.html %}
+{% include js/alerts.html %}
+{% include js/buttons.html %}
+{% include js/collapse.html %}
+{% include js/carousel.html %}
+{% include js/affix.html %}
+;T:metadata{	:dependencieso:Set:
+@hash}
+I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"2processors:type=text/html&file_type=text/html;TTI"<file-digest://app/assets/bootstrap/docs/javascript.html;TTF:charsetI"
+utf-8;F:digest"%¢¡êï:\xWj†hš=.áªYRn¨ƒVîòRÇ:lengthi>:dependencies_digest"%¬N."ÕŠÕd,¤2
+q•çº !Öêïº?SÌ”È3)QT:idI"E603f6df1aa8e77af97e79c8d5ef202286ef4b82b3a1e9c2b119f1430400649b3;F:
+mtimel+œ5–W

@@ -1,0 +1,27 @@
+{:uriI"´file://app/assets/bootstrap/docs/_includes/getting-started/disabling-responsiveness.html?type=text/html&id=e7bb062ace9ac678b60f8fab9b76a5050c2586280b09dd5fa975719a5b7c1c00:ET:load_pathI"app/assets/bootstrap;T:filenameI"Vapp/assets/bootstrap/docs/_includes/getting-started/disabling-responsiveness.html;T:	nameI"<docs/_includes/getting-started/disabling-responsiveness;T:logical_pathI"Adocs/_includes/getting-started/disabling-responsiveness.html;T:content_typeI"text/html;T:sourceI"#<div class="bs-docs-section">
+  <h1 id="disable-responsive" class="page-header">Disabling responsiveness</h1>
+
+  <p class="lead">Bootstrap automatically adapts your pages for various screen sizes.
+    Here's how to disable this feature so your page works like <a href="../examples/non-responsive/">this non-responsive example</a>.</p>
+
+  <h2>Steps to disable page responsiveness</h2>
+  <ol>
+    <li>Omit the viewport <code>&lt;meta&gt;</code> mentioned in <a href="../css/#overview-mobile">the CSS docs</a></li>
+    <li>Override the <code>width</code> on the <code>.container</code> for each grid tier with a single width, for example <code>width: 970px !important;</code> Be sure that this comes after the default Bootstrap CSS. You can optionally avoid the <code>!important</code> with media queries or some selector-fu.</li>
+    <li>If using navbars, remove all navbar collapsing and expanding behavior.</li>
+    <li>For grid layouts, use <code>.col-xs-*</code> classes in addition to, or in place of, the medium/large ones. Don't worry, the extra-small device grid scales to all resolutions.</li>
+  </ol>
+  <p>You'll still need Respond.js for IE8 (since our media queries are still there and need to be processed).
+    This disables the "mobile site" aspects of Bootstrap.</p>
+
+  <h2>Bootstrap template with responsiveness disabled</h2>
+  <p>We've applied these steps to an example. Read its source code to see the specific changes implemented.</p>
+  <p>
+    <a href="../examples/non-responsive/" class="btn btn-primary">View non-responsive example</a>
+  </p>
+</div>
+;T:metadata{	:dependencieso:Set:
+@hash}
+I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"2processors:type=text/html&file_type=text/html;TTI"dfile-digest://app/assets/bootstrap/docs/_includes/getting-started/disabling-responsiveness.html;TTF:charsetI"
+utf-8;F:digest"%iÁƒ≈˚~S∂Ó|WñÁÂ¬cïñºßK+NÀ¡& dô:lengthi#:dependencies_digest"%+Ω1Õd‘*˙ƒµ…›zè>êá°y5ùRëΩà·ıl:idI"Ee7bb062ace9ac678b60f8fab9b76a5050c2586280b09dd5fa975719a5b7c1c00;F:
+mtimel+ú5ñW

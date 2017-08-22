@@ -1,0 +1,80 @@
+/*css for listing leave balance*/
+div.ui-datepicker{
+ font-size:20px;
+}
+
+.optional a {
+    background-color: #42B373 !important;
+    background-image :none !important;
+    color: #ffffff !important;
+}
+
+.holiday a {
+    background-color: #FF0000 !important;
+    background-image :none !important;
+    color: #ffffff !important;
+}
+
+.optional:hover:after {
+    background: #333;
+    background: rgba(0,0,0,.8);
+    color: #fff;
+    content: attr(title);
+    padding: 5px 15px;
+    width: auto;
+    font-size: 20px;
+    position: absolute;
+  }
+
+.holiday:hover:after {
+    background: #333;
+    background: rgba(0,0,0,.8);
+    color: #fff;
+    content: attr(title);
+    padding: 5px 15px;
+    width: auto;
+    font-size: 20px;
+    position: absolute;
+  }
+
+.even {
+    background-color: #D9D9D9;
+}
+.odd {
+    background-color: #F8F8F8;
+}
+
+#errorExplanation {
+        width: 400px;
+        border: 2px solid #BF8A44;
+        /*padding: 7px;*/
+        padding-bottom: 12px;
+        margin-bottom: 20px;
+        background-color: #f0f0f0;
+}
+#errorExplanation h2 {
+        text-align: left;
+        font-weight: bold;
+        padding: 5px 5px 5px 15px;
+        font-size: 12px;
+        margin: 0px 0px 6px;
+        /*margin: -7px;*/
+        background-color: #BF8A44;
+        color: #fff;
+}
+#errorExplanation ul li {
+        margin-top: 5px;
+        font-size: 12px;
+        list-style: none;
+}
+
+/*pagination*/
+.pagination{float: left;
+    padding-bottom: 16px;
+    padding-top: 20px;
+    position: relative;
+    text-align: center;
+    width: 100%;}
+
+/*home page*/
+.bdays h3{color: #ff0000}

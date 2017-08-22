@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>leaves Taken</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <style>
+    .table-style{
+      margin-top: 30px;
+    }
+
+  </style>
+</head>
+<body>
+<!--<nav class="navbar navbar-default nav-header">-->
+<!--&lt;!&ndash; Brand and toggle get grouped for better mobile display &ndash;&gt;-->
+<!--<div class="navbar-header fixed-brand" >-->
+<!--<button type="button" class="navbar-toggle collapsed" data-toggle="collapse"  id="menu-toggle">-->
+<!--<span class="fa fa-bars"  aria-hidden="true"></span>-->
+<!--</button>-->
+<!--<a class="navbar-brand " href="#"><i><img src="images/logotransparent.png"  class="img-logo"></i></a>-->
+<!--</div>&lt;!&ndash; navbar-header&ndash;&gt;-->
+
+<!--<div class="collapse navbar-collapse profile" >-->
+<!--<ul class="nav navbar-nav">-->
+<!--&lt;!&ndash; Dropdown language &ndash;&gt;-->
+<!--<li class="dropdown">-->
+<!--<a href="#fakelink" class="dropdown-toggle" data-toggle="dropdown"> How'dy Hemant <i class="fa fa-user i-xs"></i></a>-->
+<!--<ul class="dropdown-menu animated half flipInX">-->
+<!--<li><a href="#fakelink">Edit profile</a></li>-->
+<!--<li><a href="#fakelink">logout</a></li>-->
+<!--</ul>-->
+<!--</li>-->
+<!--</ul>-->
+<!--</div>&lt;!&ndash; bs-example-navbar-collapse-1 &ndash;&gt;-->
+<!--</nav>-->
+
+
+<!--<div id="wrapper">-->
+
+<!-- Sidebar -->
+<!--<div id="sidebar-wrapper">-->
+<!--<ul class="sidebar-nav nav-pills nav-stacked" id="menu">-->
+<!--<li class="active">-->
+<!--<a href="/employee/welcome"><span class="fa-stack fa-lg pull-left"><i class="fa fa fa-home fa-stack-1x "></i></span>Home</a>-->
+<!--</li>-->
+<!--<li>-->
+<!--<a href="#" id="emp"><span class="fa-stack fa-lg pull-left"><i class="fa fa-user fa-stack-1x "></i></span>Employee profile</a>-->
+<!--<ul class="nav-pills nav-stacked" style="list-style-type:none;" id="emp-opt">-->
+
+<!--<li><a href="/employee/new"><span class="fa-stack fa-lg pull-left"><i class="fa  fa-user-plus fa-stack-1x "></i></span>modify</a></li>-->
+<!--<li><a href="/employee/index"><span class="fa-stack fa-lg pull-left"><i class="fa  fa-eye fa-stack-1x "></i></span>view Profile</a></li>-->
+<!--<li><a href="/employee/view_others_profile"><span class="fa-stack fa-lg pull-left"><i class="fa  fa-group fa-stack-1x "></i></span>view others profile</a></li>-->
+
+<!--</ul>-->
+<!--</li>-->
+<!--<li>-->
+<!--<a href="#" id="leave"><span class="fa-stack fa-lg pull-left" ><i class="fa fa-pencil-square-o fa-stack-1x "></i></span>Leave</a>-->
+<!--<ul class="nav-pills nav-stacked" style="list-style-type:none;" id="leave-opt">-->
+<!--<li><a href="/select/apply"><span class="fa-stack fa-lg pull-left"><i class="fa fa-envelope-o fa-stack-1x "></i></span>apply leave</a></li>-->
+<!--<li><a href="/select/cancel"><span class="fa-stack fa-lg pull-left"><i class="fa fa-times-circle-o fa-stack-1x "></i></span>Cancell leave</a></li>-->
+<!--<li><a href="/select/view_approved"><span class="fa-stack fa-lg pull-left"><i class="fa fa-file-word-o fa-stack-1x "></i></span>leave approved</a></li>-->
+<!--<li><a href="/select/list"><span class="fa-stack fa-lg pull-left"><i class="fa fa-sticky-note fa-stack-1x "></i></span>leave status</a></li>-->
+<!--<li><a href="/select/leave_balance"><span class="fa-stack fa-lg pull-left"><i class="fa fa-sticky-note-o fa-stack-1x "></i></span>basic leave info</a></li>-->
+
+<!--</ul>-->
+<!--</li>-->
+<!--<li>-->
+<!--<a href="#"><span class="fa-stack fa-lg pull-left"><i class="fa fa-server fa-stack-1x "></i></span>Miscellaneous</a>-->
+<!--</li>-->
+<!--<li>-->
+<!--<a href="#"> <span class="fa-stack fa-lg pull-left"><i class="fa fa-phone fa-stack-1x "></i></span>Contact us</a>-->
+<!--</li>-->
+
+<!--</ul>-->
+<!--</div>&lt;!&ndash; /#sidebar-wrapper &ndash;&gt;-->
+<!-- Page Content -->
+
+
+
+<div id="page-content-wrapper">
+  <div class="container">
+    <div class="row">
+
+
+
+      <div class=" col-xs-12 col-md-8 col-sm-8 col-lg-9">
+        <div class=" table-responsive">
+
+
+
+
+
+          <h3 class="text-center text-info"><u>Leave Approved</u></h3>
+
+
+
+
+
+          <% if !@leave_record.blank? && !@leave_record.where(:year=>Time.now.year).blank? && !@leave_record.where(:year=>Time.now.year).where("status =?", "approved").blank? %>
+              Total leaves taken this year = <%= @leave_record.where(:year=>Time.now.year).where("status =?", "approved").sum(:no_of_days)%>
+          <% end %>
+
+          <table class="table table-striped table-bordered table-hover table-condensed  table-style">
+
+
+
+            <tr class="<%= cycle('odd', 'even') %>">
+
+
+            <tr>
+              <th>leave Type</th>
+              <th>Start Date</th>
+              <th>end Date Date</th>
+              <th>no of days</th>
+              <th>Reason</th>
+              <th>Status</th>
+            </tr>
+
+
+            <!--<tr>-->
+            <!--<td>Sick leave</td>-->
+            <!--<td>2016/02/12</td>-->
+            <!--<td>2016/02/12</td>-->
+            <!--<td>2</td>-->
+            <!--<td>Direaohe</td>-->
+            <!--<td>approved</td>-->
+            <!--</tr>-->
+            <tr>
+              <% @leave_record.each do |t| %>
+                  <td><%=LeaveType.find(t.leave_type_id).leave_types%></td>
+                  <td><%=t.from_date%></td>
+                  <td><%=t.to_date%></td>
+                  <td><%=t.no_of_days%></td>
+                  <td> <%=t.reason%></td>
+                  <td><%=t.status%></td>
+                  </tr>
+                  <tr>
+                    <td>study leave</td>
+                    <td>2016/02/12</td>
+                    <td>2016/02/12</td>
+                    <td>6</td>
+                    <td>GATE</td>
+                    <td>approved</td>
+                  </tr>
+                  </table>
+                  </div>
+                  <div class="row ">
+                    <div class="col-md-12">
+                      <a href="#">Total leaves Approved <span class="badge">5</span></a><br>
+                    </div>
+                  </div>
+                  </div>
+                  </div>
+                  </div>
+                  </div>
+
+
+              <% end %>
+              <!-- /#page-content-wrapper -->
+              </div>
+              <!-- /#wrapper -->
+              <!-- jQuery -->
+              <script src="/bootstrap/js/jquery-3.1.0.js"></script>
+              <script src="/bootstrap/dist/js/bootstrap.min.js"></script>
+              <script src="/css/sidemenu.js"></script>
+              </body>
+</html>

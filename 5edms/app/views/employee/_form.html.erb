@@ -1,0 +1,47 @@
+   <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="stylesheet" type="text/css"/>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+  
+
+<%=form_for(@employee_detail,:url => {:controller=>"employee",:action=>"create"}) do |f| %>
+<%=raw error_messages(@employee_detail)%>
+
+<h2>Employee details page</h2></br>
+<table>
+<tr>
+	<td>Title:</td>
+	<td><%=f.select :title, ["Mr","Mrs","Ms"]%></td>
+</tr>
+<tr>
+	<td>Emp Name*:</td>
+	<td><%=f.text_field :emp_name%></td>
+</tr>
+<tr><td>DOB:*</td><td><%=f.text_field :dob %></td></tr>
+<tr><td>Gender:</td><td><%=f.select :gender, ["Male","Female"]%></td></tr>
+<tr><td>Martial status:</td><td><%=f.select :martial_status, ["Married","Unmarried"]%></td></tr>
+<tr><td>Contact No*:</td><td><%=f.telephone_field :contact_no%></td></tr>
+<tr><td>Blood Group*:</td><td><%=f.text_field :blood_group%></td></tr>
+<tr><td>OfficialMail Id:</td><td><%=f.text_field :official_mailid, :readonly => true%></td></tr>
+<tr><td>ManagerMail Id*:</td><td><%=f.text_field :manager_mailid%></td></tr>
+
+  <tr><td>Aadhaar Number:</td><td><%= f.text_field :aadhar_number,:size => 15%></td></tr>
+
+
+  <%= f.fields_for :personal_detail do |personal| %>
+<tr><td>PersonalMail Id*:</td><td><%=personal.text_field :personalmail_id%></td></tr>
+<tr><td>Anniversary Date:</td><td><%=personal.text_field :anniversary_date%></td></tr>
+<tr><td>Local Address*:</td><td><%=personal.text_area :local_address, :cols => "43", :rows => "6"%></td></tr>
+<tr><td>Permanent Address*:</td><td><%=personal.text_area :permanent_address, :cols => "43", :rows => "6"%></td></tr>
+<tr><td>Emergency Contact*:</td><td><%=personal.telephone_field :emergency_contact%></td></tr>
+<tr><td>Changeof Address:</td><td><%=personal.text_area :changeof_address, :cols => "43", :rows => "6"%></td></tr>
+<%end%>
+<tr><td><%=f.submit "Save"%></td></tr>
+</table>
+<%end%> </br>
+
+ <script type="text/javascript">
+    jQuery("#employee_detail_dob").datepicker({ dateFormat: 'dd-M-yy' });
+    jQuery("#employee_detail_personal_detail_attributes_anniversary_date").datepicker({ dateFormat: 'dd-M-yy' });
+    
+    
+</script>

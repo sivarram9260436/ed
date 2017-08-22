@@ -1,0 +1,71 @@
+/* This is links modifications*/
+
+.nav>li>a:hover {
+    text-decoration: none;
+    background-color:black;
+	color: aliceblue;
+}
+.nav-tabs>li>a {
+	border:0.5px solid lightgrey;
+}
+
+tabs>li.active>a:hover {
+    color: #555;
+    cursor: default;
+    background-color:lightcoral;
+    border: 1px solid #8aa1ce;
+    border-bottom-color: transparent;
+}
+.nav-tabs>li>a {
+    margin-right: 6px;
+    line-height: 1.42857143;
+    border: 1px solid lightgrey;
+    border-radius: 0px 0px 0 0;
+}
+
+/* This is insdie table modifications */
+.table>thead>tr>th {
+	padding: 10px;
+    vertical-align: bottom;
+    border-bottom: 2px solid #ddd;
+    font-weight: lighter;
+}
+.table>tbody>tr>td{
+	padding: 10px;
+    vertical-align: bottom;
+    border-bottom: 2px solid #ddd;
+    font-weight:bolder;
+}
+#office table{
+	width:100%
+}
+#office table>thead>tr{
+	background:#59f;
+}
+
+#profile table{
+	width:100%
+}
+
+#profile table>thead>tr{
+	color:aliceblue;
+	background:#6c6;
+}
+
+#experience table{
+	width:100%
+}
+
+#experience table>thead>tr{
+	color:aliceblue;
+	background:#e55;	
+}
+
+#qualification table{
+	width:100%
+}
+
+#qualification table>thead>tr{
+	color:aliceblue;
+	background:#233;
+}

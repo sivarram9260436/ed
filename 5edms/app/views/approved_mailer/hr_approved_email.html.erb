@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+  </head>
+  <body>
+ 
+<p>        
+Your Leave is Approved</br></br>
+
+-----------------------------------------------------------------------------
+</p>
+<p>
+      <%@leave_records=@leave_record.leave_type_id%>
+      <%@leave_type=LeaveType.find(@leave_records).leave_types%>
+      LeaveType:<%= @leave_type%></br></br>
+      From Date:<%= @leave_record.from_date%></br></br>
+      To Date:<%= @leave_record.to_date%></br></br>
+      No.of.Days:<%= @leave_record.no_of_days%></br></br>
+</p>
+With Regards,<br>
+Hr
+</body>
+</html>

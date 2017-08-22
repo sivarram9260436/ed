@@ -1,0 +1,98 @@
+<html>
+<div class="welcome_home">
+  <div id="page-content-wrapper">
+    <div class="container">
+      <div class="row">
+        <div class=" col-xs-12 col-md-8 col-sm-7 col-lg-8">
+          <div class="pull-left">
+            <h2 class="text-center text-info"><u>Welcome to EDMS & LMS</u></h2>
+            <div class="text-justify">
+              KREATIO <abbr title="Employee Database Management System">EDMS</abbr> is a sophisticated employee database that helps to manage employee data with ease, consistency and accuracy.
+              It centralizes employee records,and leave details within one easy to use window where employees can view and update their profile.
+              They can also apply for leave, check leave status and leave balance..
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<h3 style="visibility: hidden;" align="right"><%= link_to 'SignOut',:controller=>"employee", :action=>"logout" %></h3>
+
+</html>
+
+
+
+<% if @employee.role_id == 2 %>
+    <div class="bdays">
+      <% if !@birth_today.blank? %>
+          <% @birth_today.each do |bt| %>
+              <% if !bt.employee_detail.blank? and !bt.employee_detail.official_mailid.blank? %>
+                  <h3> Today is <%= bt.employee_detail.official_mailid %>'s birthday </h3>
+              <% end %>
+          <% end %>
+      <% end %>
+
+
+
+      <% if !@birth_tomorrow.blank?%>
+          <% @birth_tomorrow.each do |bt| %>
+
+              <% if !bt.employee_detail.blank? && !bt.employee_detail.official_mailid.blank? %>
+                  <h3> Tomorrow will be <%= bt.employee_detail.official_mailid %>'s birthday </h3>
+              <% end %>
+          <% end %>
+      <% end%>
+
+      <%if !@birth_yesterday.blank?%>
+          <% @birth_yesterday.each do |bt| %>
+              <% if !bt.employee_detail.blank? && !bt.employee_detail.official_mailid.blank? %>
+                  <h3> Yesterday was <%= bt.employee_detail.official_mailid %>'s birthday </h3>
+
+              <% end %>
+
+          <% end %>
+      <%end%>
+    </div>
+
+
+
+    <% if !@annivers_today.blank?%>
+        <div class="bdays">
+          <% @annivers_today.each do |bt| %>
+              <% if !bt.employee_detail.blank? && !bt.employee_detail.official_mailid.blank? %>
+                  <h3> Today is <%= bt.employee_detail.official_mailid %>'s anniversary day </h3>
+              <% end %>
+          <% end %>
+        </div>
+    <% end %>
+
+    <% if !@annivers_tomorrow.blank?%>
+        <div class="bdays">
+          <% @annivers_today.each do |bt| %>
+              <% if !bt.employee_detail.blank? && !bt.employee_detail.official_mailid.blank? %>
+                  <h3> Tomorrow will be <%= bt.employee_detail.official_mailid %>'s anniversary day </h3>
+              <% end %>
+          <% end %>
+        </div>
+    <% end %>
+
+    <% if !@annivers_yesterday.blank?%>
+        <div class="bdays">
+          <% @annivers_today.each do |bt| %>
+              <% if !bt.employee_detail.blank? && !bt.employee_detail.official_mailid.blank? %>
+                  <h3> yesterday was <%= bt.employee_detail.official_mailid %>'s anniversary day </h3>
+              <% end %>
+          <% end %>
+        </div>
+    <% end %>
+
+<% end %>
+
+
+
+
+
+
+

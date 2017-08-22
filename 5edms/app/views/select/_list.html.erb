@@ -1,0 +1,39 @@
+<style type="text/css">
+  table,td,th
+  {
+  }
+  th
+  {
+   padding:3px;
+   background-color:#EBF3DB;
+   }
+</style>
+
+ <table border="1" align="left" style="border-collapse: collapse;" class = "leave_status_list">
+   <tr>
+     <th>LEAVE TYPE</th>
+     <th>FROM DATE</th>
+     <th>TO DATE</th>
+     <th>REASON</th>
+     <th>NO.OF DAYS</th>
+     <th>STATUS</th>
+   </tr>
+
+<% if flash[:notice]%>
+
+<div class="flash_notice"><%= flash[:notice]%> </div>
+
+<% end %>
+<% @leave_record.each do |t| %>
+
+  <tr class="<%= cycle('odd', 'even') %>">
+     <td><%=LeaveType.find(t.leave_type_id).leave_types%></td>
+     <td><%=t.from_date%></td>
+     <td><%=t.to_date%></td>
+     <td><%=t.reason%></td>
+     <td><%=t.no_of_days%></td>
+     <td><%=t.status%></td>
+   </tr>
+   <% end %>
+ </table>
+

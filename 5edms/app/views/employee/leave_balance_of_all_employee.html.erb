@@ -1,0 +1,46 @@
+<style>
+  .arrange {
+    float: left;
+    width: 100%;
+    padding: 10px 0px;
+  }
+</style>
+
+<h3>Please select ..</h3>
+
+<%a=EmployeeDetail.find_by_id(session[:emp_id]).office_type %>
+
+ Office Type: <%= collection_select(:employee_detail, :office_type_id, [a], :id, :name) %>
+<div class="arrange">
+<%= link_to "Click Here #{a.name} Employees Leave Balance",:controller => "employee", :action => "get_leave_balance"%>
+</div>
+
+<script>
+
+//  $(".dummy").click(function(){
+//
+////    #a=employee_detail_office_type_id
+//
+//    var office_type = $('#employee_detail_office_type_id').val();
+//
+//    console.log(office_type)
+//
+//    $.ajax({
+//      type: "GET",
+//      url: "/employee/get_leave_balance?office_type= "+office_type ,
+//      datatype: "html",
+//      beforeSend: function (xhr) {
+//        xhr.setRequestHeader('X-CSRF-Token', $('meta[name="csrf-token"]').attr('content'))
+//      },
+//
+//
+//      success: function (data) {
+//        $('.triuble').html(data);
+//      }
+//    });
+//
+//  });
+//
+
+
+</script>

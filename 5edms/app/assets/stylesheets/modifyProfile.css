@@ -1,0 +1,40 @@
+.panel-danger>.panel-heading {
+    color: black;
+    background-color: #dc3535;
+    border-color: #ebccd1;
+    font-size: 15px;
+    font-weight: bold;
+	 height: 50px;
+    padding: 15px 40px;
+}
+.panel-default>.panel-heading {
+    color:white;
+    border-color: #777;
+    height: 50px;
+    padding: 15px 40px;
+    background: grey;
+    /* font-size: large; */
+}
+.panel-warning>.panel-heading {
+    color:white;
+    border-color: #777;
+    height: 50px;
+    padding: 15px 40px;
+    background:#5cb85c;
+    /* font-size: large; */
+}
+.panel-primary>.panel-heading {
+    
+    height: 50px;
+    padding: 15px 40px;
+    /* font-size: large; */
+}
+
+.form-control {
+	border-radius:0px;
+}
+.form-horizontal .control-label {
+    padding-top: 7px;
+    margin-bottom: 0;
+    text-align: left;
+}

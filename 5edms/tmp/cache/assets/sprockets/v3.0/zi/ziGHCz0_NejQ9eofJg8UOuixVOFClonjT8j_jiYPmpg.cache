@@ -1,0 +1,32 @@
+{:uriI"™file://app/assets/bootstrap/docs/_includes/components/breadcrumbs.html?type=text/html&id=e53ee8dc4c653eb1e6ad1d6d3e094d96fb10fb83db9cdd47324d609335a6fa13:ET:load_pathI"app/assets/bootstrap;T:filenameI"Dapp/assets/bootstrap/docs/_includes/components/breadcrumbs.html;T:	nameI"*docs/_includes/components/breadcrumbs;T:logical_pathI"/docs/_includes/components/breadcrumbs.html;T:content_typeI"text/html;T:sourceI"f<div class="bs-docs-section">
+  <h1 id="breadcrumbs" class="page-header">Breadcrumbs</h1>
+
+  <p class="lead">Indicate the current page's location within a navigational hierarchy.</p>
+  <p>Separators are automatically added in CSS through <code>:before</code> and <code>content</code>.</p>
+  <div class="bs-example" data-example-id="simple-breadcrumbs">
+    <ol class="breadcrumb">
+      <li class="active">Home</li>
+    </ol>
+    <ol class="breadcrumb">
+      <li><a href="#">Home</a></li>
+      <li class="active">Library</li>
+    </ol>
+    <ol class="breadcrumb">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Library</a></li>
+      <li class="active">Data</li>
+    </ol>
+  </div>
+{% highlight html %}
+<ol class="breadcrumb">
+  <li><a href="#">Home</a></li>
+  <li><a href="#">Library</a></li>
+  <li class="active">Data</li>
+</ol>
+{% endhighlight %}
+</div>
+;T:metadata{	:dependencieso:Set:
+@hash}
+I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"2processors:type=text/html&file_type=text/html;TTI"Rfile-digest://app/assets/bootstrap/docs/_includes/components/breadcrumbs.html;TTF:charsetI"
+utf-8;F:digest"%ãMÆxV¨~5WÜ±öG‚êCä0H²áÂz¼:lengthif:dependencies_digest"%;â¨ÌJCjªî w¦9Ø1qÿAz~€Ê&}wb+Îî:idI"Ee53ee8dc4c653eb1e6ad1d6d3e094d96fb10fb83db9cdd47324d609335a6fa13;F:
+mtimel+œ5–W

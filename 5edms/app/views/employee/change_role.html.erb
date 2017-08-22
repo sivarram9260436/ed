@@ -1,0 +1,23 @@
+<%= form_tag(:controller=>"employee",:action=> "change_role_for_all_employee") do %>
+
+<table cellspacing="8">
+  <div class="flash_notice">
+    <%= flash[:notice]%>
+  </div>
+  <tr>
+    <td>Employee MailID*:</td>
+    <td><%= collection_select("employee_detail", "id", @employee_list, :id, :official_mailid )%></td>
+  </tr>
+  <tr>
+    <td>Role : </td>
+    <td><%= collection_select("role", "id", @employee_change_role, :id, :role_name)%></td>
+  </tr>
+
+  <tr>
+    <td><%=submit_tag 'save'%></td>
+  </tr>
+<% end %>
+</table>
+</table>
+</table>
+</table>

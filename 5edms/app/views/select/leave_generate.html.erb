@@ -1,0 +1,9 @@
+Select year to create leave for all employees..<br/><br/>
+<%= form_tag(:controller=>"select",:action=>"leave_creation") do %>
+<table>
+<tr>
+<td>Select year:</td>
+<td><%= select_year(Date.today, :start_year => Date.today.year, :end_year => Date.today.year + 1)%></td></tr> 
+</table>
+<%= submit_tag("Create") %>
+<% end %>

@@ -1,0 +1,78 @@
+
+
+<link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="stylesheet" type="text/css"/>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+  
+<h2 align="LEFT">EMPLOYEE DETAILS</h2></br>
+<%=form_for(@employee_detail,:url => {:controller=>"employee",:action=>"update",:id=> @employee_detail.id}) do |f| %>
+<%=raw error_messages(@employee_detail)%>
+<fieldset>
+<legend class="field_set">Official Details</legend>
+<table cellspacing="8">	
+<tr><td>Title*:</td><td><%=f.select :title, ["Mr","Mrs","Ms"]%></td><td>Date of join*:</td><td><%=f.text_field :date_of_join,:size => 15%></td></tr>
+<tr><td>First Name*:</td><td><%=f.text_field :emp_name,:size => 15%></td><td>  Contact No*:</td><td><%=f.telephone_field :contact_no,:size => 15%></td></tr>
+<tr><td>Middle Name*:</td><td><%=f.text_field :middle_name,:size => 15%></td><td>Emplpoyee ID*:</td><td><%=f.text_field :empl_id,:size => 15%></td></tr>
+<tr><td>Last Name*:</td><td><%=f.text_field :last_name,:size => 15%></td><td>PAN Number:</td><td><%=f.text_field :pan_number,:size => 15%></td></tr>
+<tr><td>DOB:*</td><td><%=f.text_field :dob,:size => 15 %></td><td>PF Number:</td><td><%=f.text_field :pf_number,:size => 15%></td></tr>
+<tr><td>Gender:</td><td><%=f.select :gender, ["Male","Female"]%></td><td>OfficialMail Id:</td><td><%=f.text_field :official_mailid,:size => 15, :readonly => true%></td></tr>
+<tr><td>Martial status:</td><td><%=f.select :martial_status, ["Married","Unmarried"]%></td><td>ManagerMail Id*:</td><td><%=f.text_field :manager_mailid,:size => 15%></td></tr>
+</table>
+</fieldset>
+
+<fieldset>
+<legend class="field_set">Personal Details</legend>
+<table cellspacing="5"> 
+<%= f.fields_for :personal_detail do |personal| %>
+
+<tr><td>Father Name*:</td><td><%=personal.text_field :father_name,:size => 14%></td><td>Mother Name*:</td><td><%=personal.text_field :mother_name,:size => 14%></td></tr>
+
+<tr><td>D.O.B*:</td><td><%=personal.text_field :p_dob,:size => 14%></td><td>Anniversary Date:</td><td><%=personal.text_field :anniversary_date,:size => 14%></td></tr>
+
+<tr><td>Local Address*:</td><td><%=personal.text_area :local_address, :cols => "20", :rows => "5"%></td><td>Permanent Address*:</td><td><%=personal.text_area :permanent_address, :cols => "20", :rows => "5" %></td></tr>
+
+<tr><td>Changeof Address:</td><td><%=personal.text_area :changeof_address, :cols => "20", :rows => "5"%></td><td>mail_id*:</td><td><%=personal.text_field :personalmail_id,:size => 14%></td></tr>
+
+<tr><td>Emergency Person:</td><td><%=personal.text_field :guardian,:size => 14%></td><td>Relationship:</td><td><%=personal.text_field :relationship,:size => 14%></td></tr>
+
+<tr><td>Emergency no*:</td><td><%=personal.telephone_field :emergency_contact,:size => 14%></td>
+    <td>Blood group:</td><td><%=personal.text_field :blood_group,:size => 14%></td></tr>
+      <td>Passportnumber:</td><td><%=personal.text_field :passport_number,:size => 14%></td>
+
+      </table>
+</fieldset>
+
+<fieldset>
+<legend class="field_set">Previous Experience</legend>
+<table cellspacing="8">  
+ <tr><td>Company I:</td><td><%=personal.text_field :company_name,:size => 14%></td><td>Company II:</td><td><%=personal.text_field :company_name2,:size => 14%></td></tr>
+ <tr><td>Designation:</td><td><%=personal.text_field :designation, :size => 14%></td><td>Designation:</td><td><%=personal.text_field :designation2, :size => 14%></td></tr>
+ <tr><td>Year of Experience:</td><td><%=personal.text_field :experience, :size => 14%></td><td>Year of Experience:</td><td><%=personal.text_field :experience2, :size => 14%></td></tr>
+ </table>
+</fieldset>
+
+<fieldset>
+<legend class="field_set">Qualifications Details</legend>
+<table cellspacing="8"> 	
+<tr><td>PG:</td><td><%=personal.text_field :pg,:size => 17%></td><td>Year of passed:</td><td><%=personal.text_field :pg_year,:size => 17%></td></tr>
+<tr><td>UG:</td><td><%=personal.text_field :ug,:size => 17%></td><td>Year of passed:</td><td><%=personal.text_field :ug_year,:size => 17%></td></tr>
+<tr><td>Diploma:</td><td><%=personal.text_field :diploma,:size => 17%></td><td>Year of passed:</td><td><%=personal.text_field :diploma_year,:size => 17%></td></tr>
+<tr><td>12/Puc:</td><td><%=personal.text_field :puc,:size => 17%></td><td>Year of passed:</td><td><%=personal.text_field :puc_year,:size => 17%></td></tr>
+<tr><td>10:</td><td><%=personal.text_field :tenth,:size => 17%></td><td>Year of passed:</td><td><%=personal.text_field :tenth_year,:size => 17%></td></tr>
+<% end %>
+</table>
+</fieldset>
+<tr><td><%=f.submit "Save"%></td></tr>
+
+<%end%></br>
+ <script type="text/javascript">
+    jQuery("#employee_detail_dob").datepicker({ dateFormat: 'dd-M-yy' });
+    jQuery("#employee_detail_personal_detail_attributes_anniversary_date").datepicker({ dateFormat: 'dd-M-yy' });
+    jQuery("#employee_detail_date_of_join").datepicker({ dateFormat: 'dd-M-yy' });
+    jQuery("#employee_detail_personal_detail_attributes_p_dob").datepicker({ dateFormat: 'dd-M-yy' });
+    
+    
+</script>
+
+
+ <%#=render :partial => "form"%>

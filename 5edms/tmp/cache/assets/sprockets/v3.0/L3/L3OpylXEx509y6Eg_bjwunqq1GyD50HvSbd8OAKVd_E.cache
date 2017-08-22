@@ -1,0 +1,43 @@
+{:uriI"Éfile://app/assets/bootstrap/composer.json?type=application/json&id=5789865c0c2c1aceca3c90a13ff31c847fb572c962b80a9c3dd9cefe4df64d6a:ET:load_pathI"app/assets/bootstrap;T:filenameI"'app/assets/bootstrap/composer.json;T:	nameI"composer;T:logical_pathI"composer.json;T:content_typeI"application/json;T:sourceI"Á{
+  "name": "twbs/bootstrap",
+  "description": "The most popular front-end framework for developing responsive, mobile first projects on the web.",
+  "keywords": [
+    "css",
+    "js",
+    "less",
+    "mobile-first",
+    "responsive",
+    "front-end",
+    "framework",
+    "web"
+  ],
+  "homepage": "http://getbootstrap.com",
+  "authors": [
+    {
+      "name": "Mark Otto",
+      "email": "markdotto@gmail.com"
+    },
+    {
+      "name": "Jacob Thornton",
+      "email": "jacobthornton@gmail.com"
+    }
+  ],
+  "support": {
+    "issues": "https://github.com/twbs/bootstrap/issues"
+  },
+  "license": "MIT",
+  "extra": {
+    "branch-alias": {
+      "dev-master": "3.3.x-dev"
+    }
+  },
+  "replace": {
+    "twitter/bootstrap": "self.version"
+  }
+}
+;T:metadata{	:dependencieso:Set:
+@hash}
+I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"@processors:type=application/json&file_type=application/json;TTI"5file-digest://app/assets/bootstrap/composer.json;TTF:charsetI"
+utf-8;F:digest"%O&ﬁQ
+¬bˆæÔéº4„Ò/m9ÌnR¬3"rPÍ:lengthiÁ:dependencies_digest"%–∏›†ÛäYbåéó#Uú±è/LÕ£{3ZA‚œ:idI"E5789865c0c2c1aceca3c90a13ff31c847fb572c962b80a9c3dd9cefe4df64d6a;F:
+mtimel+ú5ñW

@@ -1,0 +1,35 @@
+<%= link_to 'Click Here Export All Employee Details', :controller => "employee", :action => "export_user_data" %>
+<h3>Click on the employee name to view his profile..</h3>
+
+
+<%@profiles.each do |p|%>
+<div class="two">
+ <table>
+   <tr> 
+   	<td>
+   	  <%if p.emp_name == nil%>
+   	 <%=link_to p.official_mailid, :controller=>"employee", :action=>"show", :employee_detail_id=>p.id %>
+      <%else%>
+      <%=link_to p.emp_name, :controller=>"employee", :action=>"show", :employee_detail_id=>p.id if p.emp_name%>
+      <%end%>
+  </td>
+   </tr>
+ </table> 
+ </div>	
+ <%end%>
+ 
+ 
+
+ <style type="text/css">
+.one{
+width:545px;
+float:left;
+}
+.two{
+float:left;
+width:175px;
+border-style:solid;
+border-width:1px;
+margin:1px;
+}
+</style>

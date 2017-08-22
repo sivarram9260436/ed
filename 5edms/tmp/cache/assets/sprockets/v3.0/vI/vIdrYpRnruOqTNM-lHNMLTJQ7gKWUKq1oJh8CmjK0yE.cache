@@ -1,0 +1,35 @@
+{:uriI"ƒfile://app/assets/bootstrap/docs/components.html?type=text/html&id=49d3fbe7ade5cb7535e0cde856e41ddc40a9ab7601efbc0e90cff1cd802c57b0:ET:load_pathI"app/assets/bootstrap;T:filenameI".app/assets/bootstrap/docs/components.html;T:	nameI"docs/components;T:logical_pathI"docs/components.html;T:content_typeI"text/html;T:sourceI"---
+layout: default
+title: Components
+slug: components
+lead: "Over a dozen reusable components built to provide iconography, dropdowns, input groups, navigation, alerts, and much more."
+---
+
+
+{% include components/glyphicons.html %}
+{% include components/dropdowns.html %}
+{% include components/button-groups.html %}
+{% include components/button-dropdowns.html %}
+{% include components/input-groups.html %}
+{% include components/navs.html %}
+{% include components/navbar.html %}
+{% include components/breadcrumbs.html %}
+{% include components/pagination.html %}
+{% include components/labels.html %}
+{% include components/badges.html %}
+{% include components/jumbotron.html %}
+{% include components/page-header.html %}
+{% include components/thumbnails.html %}
+{% include components/alerts.html %}
+{% include components/progress-bars.html %}
+{% include components/media.html %}
+{% include components/list-group.html %}
+{% include components/panels.html %}
+{% include components/responsive-embed.html %}
+{% include components/wells.html %}
+;T:metadata{	:dependencieso:Set:
+@hash}
+I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"2processors:type=text/html&file_type=text/html;TTI"<file-digest://app/assets/bootstrap/docs/components.html;TTF:charsetI"
+utf-8;F:digest"%I!=gL9Dúh›ÎiÈçþ–Ò¨ï4Jã§”œ‹À›N:lengthi:dependencies_digest"%
+|¬£¨½5šï%êÃT¸àÞjáùëó¯ÝÿÚÑ5üåœ:idI"E49d3fbe7ade5cb7535e0cde856e41ddc40a9ab7601efbc0e90cff1cd802c57b0;F:
+mtimel+œ5–W

@@ -1,0 +1,73 @@
+<link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="stylesheet" type="text/css"/>
+<%= javascript_include_tag '/javascripts/jquery.min.js'%>
+<%= javascript_include_tag '/javascripts/jquery-ui.min.js'%>
+<% if flash[:notice]%>
+    <div class="flash_notice">
+      <%= flash[:notice]%>
+    </div>
+
+<% end %>
+
+<%= form_tag({:controller=>"select",:action=>"detect_leaves"}, {:id=>"detecting"}) do %>
+    <%#= raw error_messages(@leave_record)%>
+    <table>
+      <h3>Deduct Leave Here</h3>
+      <br/>
+      <tr>
+<td>Email*:</td><td><%= select :leave_record, :employee_detail_id, EmployeeDetail.where(active:"Active").order("official_mailid asc").collect{|cc| [cc.official_mailid,cc.id]} %></td>
+      </tr>      
+</tr>
+      <tr>
+        <td>Leave Type*:</td><td><%= select :leave_record, :leave_type_id,LeaveType.all.collect{|aa| [aa.leave_types,aa.id]}%></td>
+      </tr>
+      <tr>
+        <td>From Date*:</td>
+        <td><%= text_field :leave_record, :from_date,:size => 15%></td>
+      </tr>
+
+      <tr>
+        <td>To Date*:</td>
+        <td><%= text_field :leave_record, :to_date,:size => 15%></td>
+      </tr>
+      <tr>
+        <td>No.of.Days*:</td>
+        <td><%= text_field :leave_record, :no_of_days,:size => 15%></td>
+      </tr>
+      <tr>
+        <td>Reason*:</td>
+        <td><%= text_area :leave_record, :reason,:cols => "43", :rows => "3" %></td>
+      </tr>
+
+      <%#= hidden_field 'employee_detail','id',:value=>session[:emp_id]%>
+
+      <tr>
+        <td><%= submit_tag("Save") %></td>
+      </tr>
+
+<% end %>
+</table>
+<script type="text/javascript">
+    $(function() {
+        $('#leave_record_from_date').datepicker({
+            dateFormat : "yy-mm-dd"
+        });
+        $('#leave_record_to_date').datepicker({
+            dateFormat : "yy-mm-dd"
+        });
+        $('#leave_record_to_date').change(function() {
+            var start = $('#leave_record_from_date').attr('value')
+            var end = $('#leave_record_to_date').attr('value');
+            $.ajax({
+                type : 'GET',
+                url : 'business_days_calculation?start=' + start + '&end=' + end,
+                dataType : 'text',
+                success : function(data) {
+                    $('#leave_record_no_of_days').attr('value', data);
+                }
+            })
+        });
+    });
+</script>
+<style>
+    #leave_record_employee_detail_id {border: 1px solid #cfcfcf;border-radius: 5px;height: 22px;width: 179px; }
+</style>

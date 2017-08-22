@@ -1,0 +1,188 @@
+body {
+        font-family: Georgia, "Arial", Times, serif;
+        font-size: 62.5%;
+        padding-left:100px;
+        /*background-color: #F4FDF4;*/
+}
+
+
+
+#container {
+
+        background-repeat: no-repeat;
+        width: 931px;
+        font-size: 1.5em;
+        margin: -20px;
+        border-top: 1px solid white;
+       
+
+}
+#header h1 {size: 15px;
+                color:#600000;
+            }
+#header
+         {
+            padding-top:6px;
+            float:left;
+            width:100%;
+            text-align:center;
+	    height:196px;
+            font-size:20px;
+            height:150;
+            margin-left:10px;
+         }
+#content-menu
+       {
+             background: none repeat scroll 0 0 #000000;
+             height: 3px;
+             position: relative;
+             width:96%;
+             margin-top:118px;
+             margin-left:30px;
+}
+
+
+/**************************************** Form elements member login ****************************/
+
+
+p.welcome {
+        font-size: 0.8em;
+        text-align: left;
+        margin-right: 30px;
+        margin-left: 35px;
+        margin-bottom: 0px;
+        margin-top: 25px;
+        color: #6B383D;
+}
+
+form {
+        margin-top: 15px;
+        margin-left: 35px;
+}
+
+input.fields {display: block;
+        width: 140px;
+        background: url(/images/input_bg.png);
+                border-top: 1px solid #E3E4E9;
+                border-left: 1px solid #E3E4E9;
+                border-bottom: 1px solid white;
+                border-right: 1px solid white;
+                margin-top: 3px;
+}
+#header-left
+         {
+                 float:left;
+                 text-align:left;
+                 width:30%;
+                 margin-left:30px;
+         }
+ #header-right
+       {
+             color:red;
+             padding-bottom: 9px;
+             padding-top: 8px;
+             text-align: right;
+             padding-right:20px;
+             float: right;
+             width: 250px;
+             font-size:13px;
+             color: #696969;
+      }
+#header-right   p{
+                font-size: 15px;
+                color:#600000;
+            }
+#top-menu{
+        padding-top:125px;
+        font-style:bold; font-size:1.0em;float:right;font-weight:bold;
+        margin-right:-6px;
+}            margin-bottom: 3px;}
+
+label {
+        color: #A5BB73;
+        font-style:Arial;
+}
+
+.submit_button {
+        margin-top: 15px;
+        padding: 2px;
+        
+        float: right;
+        margin-right: 40px;
+        border-top: 2px solid white;
+        border-left: 2px solid white;
+        border-bottom: 2px solid #E3E4E9;
+        border-right: 2px solid #E3E4E9;
+}
+
+/**************************************** extra classes: contact us ****************************/
+
+form.contact_us {
+        width: 190px;
+        margin-top: 15px;
+        margin-left: 0px;
+        padding: 15px;
+        background-color: #FBF9F4;
+        background-image: url(/images/form_bg.png);
+        background-repeat: no-repeat;
+        background-position: right bottom;
+}
+
+input.fields_contact_us {display: block;
+        width: 185px;
+        background: url(/images/input_bg.png);
+                border-top: 1px solid #E3E4E9;
+                border-left: 1px solid #E3E4E9;
+                border-bottom: 1px solid white;
+                border-right: 1px solid white;
+                margin-top: 3px;
+            margin-bottom: 3px;}
+
+textarea {width: 185px;
+          background: url(/images/input_bg.png);
+          border-top: 1px solid #E3E4E9;
+                  border-left: 1px solid #E3E4E9;
+                  border-bottom: 1px solid white;
+                  border-right: 1px solid white;
+
+          margin-top: 3px;}
+
+.submit_button_contact {
+        margin-top: 15px;
+        padding: 2px;
+        background-color: #EAF4D9;
+}
+
+
+table{border:2px }
+
+.flash_notice {
+        text-align: center;
+        font-size: 1.2em;
+        font-weight: bold;
+        color: #FF0000;
+}
+.login_details
+{
+float:right;
+padding-right:18px;
+margin-top:0px;
+margin-right:8px;
+font-size:18px;
+color:#1EA17C;
+}
+.welcome_home {
+ font-size:1.1em;
+ color:#76C145;
+ text-align: left;
+}
+
+.welcome_header {
+ font-size:1.1em;
+ color:#76C145;
+ text-align: center;
+}
+.login_header {
+margin-top:-130px;
+}
+

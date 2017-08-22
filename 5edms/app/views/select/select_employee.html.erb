@@ -1,0 +1,14 @@
+<h3>Click on the employee name to view leave balance..<h3>
+
+<%@employee_list.each do |p|%></br>
+
+<tr>
+    <td><%=link_to p.emp_name, :controller=>"select", :action=>"employee_leave_balance", :employee_detail_id=>p.id if p.emp_name%>
+    </td>
+  <%end%>
+</tr>
+
+  
+
+ 
+

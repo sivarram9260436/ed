@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>EDMS and Leave Management System</title>
+<link rel="stylesheet" type="text/css" href="/stylesheets/backupstyle.css" />
+</head>
+
+<body>
+
+<div id="container">
+
+<div id="header">
+
+<div id="header_left">
+
+</div>
+
+<div id="header_right">
+
+  </div>
+  
+</div>
+<div id="left">
+</div>
+<div id="right">
+	<%= yield %>
+
+</div>
+
+<div id="footer">Employee and Leave Management Software </div>
+</div>
+</body>
+</html>
+
+

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Edms Login new</title>
+  <!--<meta charset="UTF-8">-->
+  <!--<meta name="viewport" content="width=device-width, initial-scale=1">-->
+  <!--<link rel="stylesheet" href="bootstrap/dist/css/bootstrap.min.css">-->
+  <!--<script src="bootstrap/js/jquery-3.1.0.js"></script>-->
+  <!--<script src="bootstrap/dist/js/bootstrap.min.js"></script>-->
+  <!--<link rel="stylesheet" href="animated/animate.css">-->
+  <!--<link rel="stylesheet" href="font-awesome-4.6.3/css/font-awesome.min.css">-->
+  <!--<link rel="stylesheet" href="css/login.css">-->
+  <!--<link rel="stylesheet" href="css/checkbox.css">-->
+
+
+
+  <script>
+    $(document).ready(function (){
+      $('#showlike').addClass( 'animated fadeInDownBig');
+    });
+  </script>
+</head>
+<body>
+<div class="container">
+  <div class="row">
+    <!-- This is for logo-->
+    <div id="showlike" class="
+         col-xs-6 col-xs-offset-3
+         col-sm-6 col-sm-offset-3
+         col-md-5 col-md-offset-4
+         col-lg-4 col-lg-offset-4">
+      <div  class="logo-display text-center">
+        <%= image_tag "/images/logotransparent.png",:background=> "#337ab7"; %>
+      </div>
+      <!-- End of logo-->
+      <!--form body -->
+      <div class="panel">
+        <div class="panel-heading login-header" >
+          <div class="panel-title"><h3 class="text-center"><strong>E.D.M.S</strong>  </h3></div>
+        </div>
+        <div class="panel-body">
+          <div class="row">
+
+            <div class="flash_notice">
+              <h4 style="color:red;">
+                <p id="text"> <%= flash[:notice] if flash[:notice]!= nil %></p> </h4>
+            </div>
+
+            <%= form_tag(:controller=>"employee", :action=>"login") do %>
+
+              <div class="col-sm-12">
+                <div class="form-group">
+                  <div class="input-group margin-bottom-sm">
+                    <span class="input-group-addon"><i class="fa fa-envelope-o fa-fw"></i></span>
+                    <%= text_field :employee_detail,:official_mailid,:class=>'form-control',:placeholder=>'Email address',:iclass=>"fa fa-envelope-o fa-fw" %>
+
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-12">
+                <div class="form-group">
+                  <div class="input-group">
+                    <span class="input-group-addon"><i class="fa fa-key fa-fw"></i></span>
+                    <%= password_field :employee_detail,:password,:class=>'form-control', :placeholder=>'Password',:iclass=>"fa fa-key fa-fw"%>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-12">
+                <div class="form-group">
+                  <div class="checkbox checkbox-primary">
+                    <input id="checkbox2" type="checkbox" checked="">
+                    <label for="checkbox2">
+                      Remember me
+                    </label>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-sm-12">
+                <div class="form-group">
+                  <button type="submit" class="btn btn-success btn-block "><i class="fa fa-unlock"></i> Login</button>
+                </div>
+              </div>
+
+              <!--
+              <p class="text-center"><strong>-or-</strong></p>
+              <div class="form-group" >
+                  <div class="col-sm-12" id="facebookbtn"  >
+                      <button  type="button" class="btn btn-primary btn-block btn-facebook" style="border-radius: 10px;"><i class="fa fa-facebook"></i> Login with Facebook account</button>
+                  </div>
+              </div>
+              <div class="form-group">
+                  <div class="col-sm-12" id="twitterbtn">
+                      <button  type="button" class="btn btn-info btn-block btn-twitter"><i class="fa fa-twitter"></i> Login with Twitter account</button>
+                  </div>
+              </div>-->
+            <%end%>
+          </div>
+        </div>
+      </div>
+      <%= testing %>
+      <!--Form Ends-->
+    </div>
+  </div>
+</div>
+</body>
+</html>

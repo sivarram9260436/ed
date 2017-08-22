@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>view All Profile</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!-- DataTables ends here-->
+</head>
+<body>
+
+
+<!-- Sidebar  navigator is here-->
+
+<!-- Page Content -->
+
+
+
+<div id="page-content-wrapper">
+  <div class="container">
+    <div class="row">
+      <div class=" col-xs-12 col-md-8 col-sm-7 col-lg-9">
+        <h4 class="text-center text-danger"> <abbr title="
+								Note:
+								For best result
+								1.for more details use plus sign
+								2.optimize result use search or
+								dropdowns or
+								order sortings">
+          View All Profiles</abbr></h4>
+        <div  class="main_datatables ">
+
+
+
+          <!-- Data Table Implementations -->
+          <div class="container-fluid ">
+
+            <table id="example" class="table table-striped table-bordered nowrap" cellspacing="0" width="100%">
+              <thead>
+              <tr class="<%= cycle('odd', 'even') %>">
+              <tr>
+                <th>Employee Id</th>
+                <th>Title</th>
+                <th>First Name</th>
+                <th>Middle Name</th>
+                <th>Last Name</th>
+                <th>Contact .No</th>
+                <th>Official Mail id</th>
+                <th>Role</th>
+              </tr>
+              </thead>
+              <% @others_profile.each do |p| %>
+                  <tr>
+                    <td><%=p.empl_id%></td>
+                    <td><%=p.title%></td>
+                    <td><%=p.emp_name%></td>
+                    <td><%=p.middle_name%></td>
+                    <td><%=p.last_name%></td>
+                    <td><%=p.contact_no%></td>
+                    <td><%=p.official_mailid%></td>
+                    <td><%=Role.find(p.role_id).role_name%></td>
+
+                  </tr>
+              <% end %>
+
+
+              <!--<tfoot>-->
+              <!--<tr>-->
+              <!--<th>Employee Id</th>-->
+              <!--<th>Title</th>-->
+              <!--<th>First Name</th>-->
+              <!--<th>Middle Name</th>-->
+              <!--<th>Last Name</th>-->
+              <!--<th>Contact .No</th>-->
+              <!--<th>Official Mail id</th>-->
+              <!--<th>Role</th>-->
+              <!--</tr>-->
+              <!--</tfoot>-->
+              <tbody>
+
+
+              </tbody>
+            </table>
+
+
+          </div>
+
+
+          <!-- data tables   ends-->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Page Contents ends here-->
+</div>
+</tr>
+<!--note keep jquery file above in head-->
+<!--main frame js files-->
+<script type="text/javascript">
+  $(document).ready(function() {
+    var table = $('#example').DataTable( {
+      responsive: true
+    } );
+
+    new $.fn.dataTable.FixedHeader( table );
+  } );
+</script>
+</body>
+</html>

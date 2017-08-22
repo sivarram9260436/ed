@@ -1,0 +1,29 @@
+{:uriI"{file://app/assets/stylesheets/login.html?type=text/html&id=df1b3de7188c1a46d2602200a276dda2fe945a7aa8411b13eb642a61d2d24e7a:ET:load_pathI"app/assets/stylesheets;T:filenameI"&app/assets/stylesheets/login.html;T:	nameI"
+login;T:logical_pathI"login.html;T:content_typeI"text/html;T:sourceI"Š<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<body>
+<div class="top_image">
+<div id="wrapper">
+<div id="wrapper_header">
+<a href="/">
+<img  src="/home/shabrin/Desktop/EDMS_logoweb.jpg" alt="Go to Leave Management page">
+</a>	
+<style type="text/css">
+<!--
+.style1 {
+	color: #666666
+}
+body,td,th {
+	color: #666666;
+}
+-->
+</style>
+</div>
+</div>
+</div>
+</body>
+</html>;T:metadata{	:dependencieso:Set:
+@hash}
+I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"2processors:type=text/html&file_type=text/html;TTI"4file-digest://app/assets/stylesheets/login.html;TTF:charsetI"
+utf-8;F:digest"%óáŠ!'ûn@B÷Õ5ûÅn^êT¹®9Ï*Ü{ô­øì·(:lengthiŠ:dependencies_digest"%ö“Ùs’Õ§‰­iL¼ÿX™”F¸ci_Â.ÔDŞX:idI"Edf1b3de7188c1a46d2602200a276dda2fe945a7aa8411b13eb642a61d2d24e7a;F:
+mtimel+ğşW

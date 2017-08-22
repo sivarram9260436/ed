@@ -1,0 +1,13 @@
+<%= form_tag(:controller=>"employee",:action=>"upload_document") do%>
+<table>
+    <tr>
+      <td>Document Name:</td><td><%=text_field :document, :document_name,:size=>20%></td>
+    </tr>
+    <tr>
+      <td>Attach Document:</td><td><%=file_field :document, :document_path%></td>
+    </tr>
+</table>
+
+<%= submit_tag("Upload") %>
+
+<% end %>

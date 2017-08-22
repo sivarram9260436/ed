@@ -1,0 +1,128 @@
+<style type="text/css">
+<!--
+body
+  {
+   background-color :#b0c4de;
+  font-size:62.5%;
+  font-family:arial;  
+ }
+#wrapper
+ {
+  background :none repeat scroll 0 0 #F0F8FF; 
+   margin: 0 auto;
+    overflow: hidden;
+    width: 1024px;
+ }
+#top-menu {
+    background: none repeat scroll 0 0 #2C4056;
+    float: left;
+    font-size: 0.8em;
+    height: 1.8em;
+    padding: 9px 1px 9px 6px;
+    width: 1017px;
+}
+#wrapper_header { float: left; width:100%;}
+ #account{
+          float:right;
+    }
+ ul {
+   
+    margin: 0;
+    padding-left:4px;
+}
+#top-menu li {
+    float: left;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    white-space: nowrap;
+}
+a {
+    color: #FFFFFF;
+    font-weight: bold;
+    padding-right: 8px;
+}
+.header{
+    background: none repeat scroll 0 0 #E6E6FA;
+    height: 5.2em;
+    padding: 4px 0 0;
+}
+ h1{  color:#B22222; width :350; height :480;
+     font-size:34; 
+  }
+h2{
+  position:relative;
+  left:-140px;
+  color:#4B0082;
+  text-align:center;
+  font-size:26;
+ }
+
+.menucontainer
+{
+   background:none repeat scroll 0 0 gray;
+   height:25px;
+   float: left;
+   width: 100%;
+   margin-top: -450px; 
+   border:2px;
+ 
+}
+
+.ul {
+    float: left;
+    list-style-type: none;
+    padding: 10px 10px 3px 8px ;
+    width: 100%;
+    margin:10px;
+    white-space: nowrap;
+}
+
+ul .active{
+   text-decoration:none;
+}
+ul .contact{
+   text-decoration:none;
+}
+
+.submenu {
+    background: none repeat scroll 0 0 ;
+    float: left;
+    padding-top:2em;
+    padding-right:10px;
+    padding-bottom:20px;
+    padding-left:15px;
+    height:600px;
+    width: 18%;
+    font-size:14;
+}
+.submenu li a.visited{text-decoration:underline}
+b{
+  color:#B22222;
+ }
+.submenu ul{
+    list-style-type:none;
+     
+}
+.submenu a{
+   color:#000000;
+  }
+#container {
+    float:center;
+    height: 850px;
+   min-height: 800px;
+    padding: 55px 63px 20px 40px;
+    width: 90%;
+   
+}
+
+#footer{
+   background:#2C4056;
+  border: 0 none;
+  color: #ffffff;
+text-align:center;
+width:100%;
+}
+
+-->
+</style>

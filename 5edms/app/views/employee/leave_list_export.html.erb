@@ -1,0 +1,13 @@
+<%= form_tag({:controller=>"employee",:action=>"individual_leave_export"}, {:id=>"detecting"}) do %>
+    <% @emp = EmployeeDetail.where(active:"Active").order("official_mailid asc") %>
+    <table class="export_leave">
+    <tr><td>Email*: </td>
+        <td><%= select_tag 'emp_id', options_for_select(@emp.collect{ |u| [u.official_mailid, u.id] }) %></td>
+      <td><%= button_to("Export") %></td>
+    </tr>
+    </table>
+<% end %>
+<style>
+    #emp_id {border: 1px solid #cfcfcf;border-radius: 5px;height: 22px;width: 179px; }
+    .export_leave tr td{float: left;margin-right: 10px;}
+</style>

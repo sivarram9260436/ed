@@ -1,0 +1,38 @@
+{:uriI"“file://app/assets/bootstrap/docs/_includes/components/wells.html?type=text/html&id=59788de3bf7d2d5d4ddcd2d5e18b2a6e1a34da9cf311e81888235dc0c2452bc1:ET:load_pathI"app/assets/bootstrap;T:filenameI">app/assets/bootstrap/docs/_includes/components/wells.html;T:	nameI"$docs/_includes/components/wells;T:logical_pathI")docs/_includes/components/wells.html;T:content_typeI"text/html;T:sourceI"£<div class="bs-docs-section">
+  <h1 id="wells" class="page-header">Wells</h1>
+
+  <h2>Default well</h2>
+  <p>Use the well as a simple effect on an element to give it an inset effect.</p>
+  <div class="bs-example" data-example-id="default-well">
+    <div class="well">
+      Look, I'm in a well!
+    </div>
+  </div>
+{% highlight html %}
+<div class="well">...</div>
+{% endhighlight %}
+  <h2>Optional classes</h2>
+  <p>Control padding and rounded corners with two optional modifier classes.</p>
+  <div class="bs-example" data-example-id="large-well">
+    <div class="well well-lg">
+      Look, I'm in a large well!
+    </div>
+  </div>
+{% highlight html %}
+<div class="well well-lg">...</div>
+{% endhighlight %}
+
+  <div class="bs-example" data-example-id="small-well">
+    <div class="well well-sm">
+      Look, I'm in a small well!
+    </div>
+  </div>
+{% highlight html %}
+<div class="well well-sm">...</div>
+{% endhighlight %}
+</div>
+;T:metadata{	:dependencieso:Set:
+@hash}
+I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"2processors:type=text/html&file_type=text/html;TTI"Lfile-digest://app/assets/bootstrap/docs/_includes/components/wells.html;TTF:charsetI"
+utf-8;F:digest"%@ˆQsP«*J-9Û"j5ó¤®yèea:şÀè"±Pè:lengthi£:dependencies_digest"%wM¿+¾Cä5àIøìÓbÅ?/½Ù®‘b‡ùku‹s)´=x:idI"E59788de3bf7d2d5d4ddcd2d5e18b2a6e1a34da9cf311e81888235dc0c2452bc1;F:
+mtimel+œ5–W

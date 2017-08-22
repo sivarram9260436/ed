@@ -1,0 +1,69 @@
+{:uriI"Šfile://app/assets/bootstrap/docs/_data/translations.yml?type=text/yaml&id=c10b9f5bdedf6f2ca57fa4697db8182b80913b3936ebdd8e42fcd72350b07442:ET:load_pathI"app/assets/bootstrap;T:filenameI"5app/assets/bootstrap/docs/_data/translations.yml;T:	nameI"docs/_data/translations;T:logical_pathI" docs/_data/translations.yml;T:content_typeI"text/yaml;T:sourceI"¢- name: Chinese
+  code: zh
+  description: Bootstrap ä¸­æ–‡æ–‡æ¡£
+  url: http://v3.bootcss.com/
+
+- name: Chinese (Traditional)
+  code: zh-TW
+  description: Bootstrap 3 ä¸­æ–‡æ‰‹å†Š
+  url: https://kkbruce.tw/bs3/
+ 
+- name: Danish
+  code: da
+  description: Bootstrap pÃ¥ Dansk
+  url: http://getbootstrap.dk/
+
+- name: French
+  code: fr
+  description: Bootstrap en FranÃ§ais
+  url: http://www.oneskyapp.com/fr/docs/bootstrap/getting-started/
+
+- name: German
+  code: de
+  description: Bootstrap auf Deutsch
+  url: http://holdirbootstrap.de/
+
+- name: Italian
+  code: it
+  description: Bootstrap in Italiano
+  url: http://www.hackerstribe.com/guide/IT-bootstrap-3.1.1/
+
+- name: Korean
+  code: ko
+  description: Bootstrap í•œêµ­ì–´
+  url: http://bootstrapk.com/
+
+- name: Brazilian Portuguese
+  code: pt-BR
+  description: Bootstrap em PortuguÃªs do Brasil
+  url: http://bootstrapbrasil.github.io/
+
+- name: Russian
+  code: ru
+  description: Bootstrap Ğ¿Ğ¾-Ñ€ÑƒÑÑĞºĞ¸
+  url: http://www.oneskyapp.com/ru/docs/bootstrap/
+
+- name: Spanish
+  code: es
+  description: Bootstrap en EspaÃ±ol
+  url: http://www.oneskyapp.com/es/docs/bootstrap/
+
+- name: Turkish
+  code: tr
+  description: TÃ¼rkÃ§e Bootstrap
+  url: http://www.trbootstrap.com
+
+- name: Ukrainian
+  code: uk
+  description: Bootstrap ÑƒĞºÑ€Ğ°Ñ—Ğ½ÑÑŒĞºĞ¾Ñ
+  url: http://twbs.docs.org.ua
+
+- name: Vietnamese
+  code: vi
+  description: Bootstrap báº±ng tiáº¿ng Viá»‡t
+  url: http://getbootstrap.com.vn
+;T:metadata{	:dependencieso:Set:
+@hash}
+I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"2processors:type=text/yaml&file_type=text/yaml;TTI"Cfile-digest://app/assets/bootstrap/docs/_data/translations.yml;TTF:charsetI"
+utf-8;F:digest"%‘¨wÂ¢Íî6ë…µêrå9ŠŒj‡ĞÛ¾¿}qÊ!ÅÎ:lengthi¢:dependencies_digest"%Ó7J¸-ø¨ßæª¦Ä]!eLzy„ôqÎ¼ÃÅã:idI"Ec10b9f5bdedf6f2ca57fa4697db8182b80913b3936ebdd8e42fcd72350b07442;F:
+mtimel+œ5–W

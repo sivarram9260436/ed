@@ -1,0 +1,25 @@
+*{
+    border-radius:0 !important;
+}
+body{
+    background-color:#e5e9ec;
+}
+#showlike{
+    margin-top:100px;
+}
+#facebookbtn{
+    padding-bottom:2%;
+}
+.logo-display{
+    padding-bottom:5%;
+}
+/*.main-center{
+    margin: 0 auto;
+    max-width: 450px;
+    padding: 30px 30px;
+    height: auto;
+
+}*/
+.login-header{
+    border-bottom-color:lightgrey;
+}

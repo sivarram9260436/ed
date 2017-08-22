@@ -1,0 +1,23 @@
+		#inputdomain,#inputurl{
+			border-radius: 0px;
+			border:none;
+			border-bottom: 2px solid grey;
+		}
+		#protocol>.alert{
+			background:#48f;
+		}
+		#hostname>.alert{
+			background:#f43;
+		}
+		#portname>.alert{
+			background:#fc0;
+		}
+		#path>.alert{
+			background:#48f;
+		}
+		#search>.alert{
+			background:#3b5;
+		}
+		#hash>.alert{
+			background:#f43;
+		}

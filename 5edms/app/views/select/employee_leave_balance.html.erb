@@ -1,0 +1,48 @@
+
+	<style type="text/css">
+table,td,th
+{
+}
+th
+{
+padding:3px;
+background-color: #CBCBCB;
+}
+</style>
+<% if flash[:notice]%> 
+
+<div class="flash_notice"><%= flash[:notice]%> </div>
+
+<% end %>
+
+
+	<h3>Listing leave balance of "<%@name.each do |t|%>
+    <%=t.emp_name%>
+    <%end%>" </h3>	
+	
+	 
+<table border="1" align="center" cellpadding="7" style="border-collapse: collapse;">
+ <tr>
+   <th>LEAVE TYPE</th>
+   <th>TOTAL LEAVES</th>
+   <th>ELIGIBLE LEAVES</th>
+   <th>AVAILED</th>
+   <th>CARRY FORWARD</th>
+   <th>AVAILABLE BALANCE</th>
+</tr>
+
+  <%@employee_lists.each do |t| %>
+  <tr class="<%= cycle('odd', 'even') %>">  
+    <td bgcolor= 	#F0FFF0><%=LeaveType.find(t.leave_type_id).leave_types%></td>
+    <td><%=t.total_leaves%></td>
+    <td><%=t.total_leave_balance%></td>
+    <td><%=t.availed%></td>
+    <td><%=t.carry_forward%></td>
+    <td><%=t.balance%></td>  
+    <%end%>
+  </tr>
+    
+</table>
+<table>
+ <%= button_to 'back', :controller=>"select", :action=>"select_employee" %></br></br>
+ </table>

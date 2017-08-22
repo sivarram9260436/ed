@@ -1,0 +1,74 @@
+.search_block{border-top:0px;float:left;margin-bottom:6px;width: 100%;}
+.search_fields{border:1px solid #d1d1d1;border-top:0px;border-bottom:0px;float:left;width:99.8%;text-align:center;padding-top:17px;padding-bottom:17px;background:#fff;}
+.search_fields input{font-family: arial;display: inline;width:290px;height:23px;border:1px solid #cfcfcf;border-radius:5px;font-size:1.2em;margin-right:17px;color:#615e69;}
+.search_fields p{font-size:1.2em;color:#615e69;margin-right:17px;display: inline;}
+.search_fields p select{width:100px;padding:2px;border:1px solid #cfcfcf;border-radius:5px;margin-left:5px;}
+.search_fields p.advanced select{border:0px;color: #615E69;font-family: arial;}
+.search_fields p.advanced{padding-left:15px;}
+.search_fields input.submit{cursor: pointer;background:gray;padding:0px 15px 4px;width:80px;color:#fff;height:32px;border:0px;}
+.sarch_announce{font-size:1.2em;padding:10px 0px 10px 22px;width: 97.6%;float:left;}
+
+.section_block{background: none repeat scroll 0 0 #FFFFFF;float:left;width:48.8%;border-radius:7px;margin:6px 0px 6px 4px;box-shadow:0 0 2px #888888;}
+.heading{float:left;width:auto;background:#b2ab7d;margin-top: 14px;margin-bottom: 14px;}
+.heading p{font-size:1.2em;color:#fff;padding:6px 75px 6px 22px;}
+
+.full_section{width:99.3%;}
+.table_content{font-size:1.1em;color:#4a4a4a;float:left;width:100%;}
+.table_content table{border:1px solid #cfcfcf;border-collapse: collapse;}
+.table_content tr{border-bottom:1px solid #cfcfcf;width: 100%;}
+.table_content tr th{height: 22px;text-align: left;border-right:1px solid #cfcfcf;font-weight:bold;padding-left:5px;background:url("/images/table_head_bg.jpg") repeat-x left top;}
+.table_content tr td{height: 22px;padding-left:5px;}
+.table_content tr th:last-child{border-right:0px;}
+.table_content tr td:last-child{border-right:0px;}
+.table_content tr:last-child{border-bottom:0px;}
+.full_section .section_content{width:96.3%;}
+.login_block{ background: none repeat scroll 0 0 transparent;clear: both;margin: 0 350px;overflow: hidden;width: 492px;}
+.login_block .section_block{width:98.5%;}
+.no_bg .heading{background: -moz-linear-gradient(right center , #6d8a92 10%, #6d8a92 35%, #6d8a92 45%, #6d8a92 65%, #3b6370 88%, #245261 93%, #134556 97%, #0d4152 100%) repeat scroll 0 0 transparent;left: -5px;position: relative;
+background: -webkit-gradient(linear,right center,left center, color-stop(10%,#6d8a92), color-stop(35%,#6d8a92),color-stop(45%,#6d8a92),color-stop(65%,#6d8a92),color-stop(88%,#3b6370),color-stop(93%,#245261),color-stop(97%,#134556),color-stop(100%,#0d4152)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(right center ,#6d8a92 10%, #6d8a92 35%, #6d8a92 45%, #6d8a92 65%, #3b6370 88%, #245261 93%, #134556 97%, #0d4152 100%); /* Chrome10+,Safari5.1+ */}
+.login_content{float:left;width:100%;}
+.login_content input{width:290px;border:1px solid #cfcfcf;border-radius:4px;padding:3px 0px; margin:8px 0px;}
+.login_content label{font-size:18px;color:#5e5b62;padding-right:5px;}
+.submit_button{margin-top:0px;float:right;padding:0px;width: auto;margin-right: 0px;border: 0 none;}
+.remember{float:left;padding-left: 15px;}
+.remember label{float:none;}
+.login_content table{padding:0px 25px;width:85.5%;}
+.login_content table tr{background:none;}
+.remember input{width:10px;}
+.login_content td{vertical-align:middle;}
+.user_detail{ border-bottom-left-radius: 7px;border-bottom-right-radius: 7px;height:45px;padding:10px 0px;text-align:center;
+background:#8AAB58;
+/*background: -moz-linear-gradient(center top , #081f27 0%, #081f27 2%, #0f3a4a 2%, #0f3a4a 3%, #14475c 3%, #14485d 7%, #14485e 15%, #134961 30%, #144b69 45%, #134e70 60%, #114f78 75%, #104f7a 85%, #10507c 90%, #10507e 100%) repeat scroll 0 0 transparent;*/
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#081f27), color-stop(2%,#081f27),color-stop(2%,#0f3a4a),color-stop(3%,#14475c),color-stop(7%,#14485d),color-stop(15%,#14485e),color-stop(30%,#134961),color-stop(45%,#144b69),color-stop(60%,#134e70),color-stop(75%,#114f78),color-stop(85%,#104f7a),color-stop(90%,#10507c),color-stop(100%,#10507e)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top, #081f27 0%, #081f27 2%, #0f3a4a 2%, #0f3a4a 3%, #14475c 3%, #14485d 7%, #14485e 15%, #134961 30%, #144b69 45%, #134e70 60%, #114f78 75%, #104f7a 85%, #10507c 90%, #10507e 100%) repeat scroll 0 0 transparent; /* Chrome10+,Safari5.1+ */}
+.user_detail p{font-size:1.2em;padding-bottom:10px;} 
+.user_detail p a{color:black;font-size:14px;text-decoration:none;}
+.user_detail p a:hover{color:green;text-decoration:underline;}
+
+.clent_logo{clear: both;margin: 30px auto 60px;text-align: center;}
+.user_detail p.user a{color:white;font-size:14px;text-decoration:none;}
+.user_detail p.user a:hover{color:green;text-decoration:underline;}
+.search_block > div:last-child {border-bottom-right-radius: 6px;border-bottom-left-radius: 6px;border: 1px solid #D1D1D1;}
+
+
+h2{ position: relative; color: white; margin: 10px -30px 10px -5px; padding: 10px 25px 10px; text-shadow: 2px 2px 4px rgba(0, 0, 0, .8); background: #5C5C5C;width: 34%; font-size: 1.2em;
+background-image: -webkit-gradient(linear,right center,left center, color-stop(10%,#6d8a92), color-stop(35%,#6d8a92),color-stop(45%,#6d8a92),color-stop(65%,#6d8a92),color-stop(88%,#3b6370),color-stop(93%,#245261),color-stop(97%,#134556),color-stop(100%,#0d4152));}
+h2:before, h2:after { content: ''; position: absolute; border-style: solid; border-color: transparent; bottom: -10px; }    
+h2:before{border-width:0px 5px 10px 0px; border-right-color: #0D4152; left: 0; }    
+h2:after {width: 0; height: 0; right: 0px; top: 0px; border-color: transparent #fff transparent transparent;border-width: 17px 9px 18px;}
+  
+.table_content th[data-title='true'] {width:380px;}
+.table_content tr td:nth-child(1) {text-align:right;padding-right:5px;}
+.table_content tr:nth-child(even) {background: #f6f6f6;}
+.table_content tr:nth-child(odd) {background: #E7E7E7;}
+.table_content tr:nth-child(even):hover {background: #f6f6f6;}
+.table_content tr:nth-child(odd):hover {background: #ffffff;}
+.table_content tfoot tr {background-color: rgba(13, 65, 82, 0.46) !important;}
+
+.pagination_bar {text-align: right;padding: 0px 10px 0px 0px;font-weight: bolder;}
+.pagination_bar a {color: white;}
+
+
+/* For top floating navigation */ 
+.detachedfromPage {top: 0px; position: fixed;z-index: 99999;margin-top:0px;width: 99em;box-shadow: 0px 0px 13px #6D6565;}

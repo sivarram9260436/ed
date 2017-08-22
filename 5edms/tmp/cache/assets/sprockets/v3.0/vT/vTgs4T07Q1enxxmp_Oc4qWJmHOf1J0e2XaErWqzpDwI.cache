@@ -1,0 +1,63 @@
+{:uriI"‰file://app/assets/bootstrap/docs/_includes/header.html?type=text/html&id=163e133ed683a01851e29619f82a55d105b82bc8bb0bcb07e3055f0741fd32e1:ET:load_pathI"app/assets/bootstrap;T:filenameI"4app/assets/bootstrap/docs/_includes/header.html;T:	nameI"docs/_includes/header;T:logical_pathI"docs/_includes/header.html;T:content_typeI"text/html;T:sourceI" 	<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Bootstrap, a sleek, intuitive, and powerful mobile first front-end framework for faster and easier web development.">
+<meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+
+<title>
+  {% if page.layout == "home" %}
+    {{ page.title }}
+  {% else %}
+    {{ page.title }} &middot; Bootstrap
+  {% endif %}
+</title>
+
+<!-- Bootstrap core CSS -->
+{% if site.github %}
+<link href="../dist/css/bootstrap.min.css" rel="stylesheet">
+{% else %}
+<link href="../dist/css/bootstrap.css" rel="stylesheet">
+{% endif %}
+{% if page.slug == "css" or page.slug == "components" or page.slug == "js" %}
+  <!-- Optional Bootstrap Theme -->
+{% if site.github %}
+  <link href="data:text/css;charset=utf-8," data-href="../dist/css/bootstrap-theme.min.css" rel="stylesheet" id="bs-theme-stylesheet">
+{% else %}
+  <link href="data:text/css;charset=utf-8," data-href="../dist/css/bootstrap-theme.css" rel="stylesheet" id="bs-theme-stylesheet">
+{% endif %}
+{% endif %}
+
+<!-- Documentation extras -->
+{% if site.github %}
+<link href="../assets/css/docs.min.css" rel="stylesheet">
+{% else %}
+<link href="../assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+<link href="../assets/css/src/pygments-manni.css" rel="stylesheet">
+<link href="../assets/css/src/docs.css" rel="stylesheet">
+{% endif %}
+<!--[if lt IE 9]><script src="../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+<script src="../assets/js/ie-emulation-modes-warning.js"></script>
+
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+<!-- Favicons -->
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="icon" href="/favicon.ico">
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-146052-10', 'getbootstrap.com');
+  ga('send', 'pageview');
+</script>
+;T:metadata{	:dependencieso:Set:
+@hash}
+I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"2processors:type=text/html&file_type=text/html;TTI"Bfile-digest://app/assets/bootstrap/docs/_includes/header.html;TTF:charsetI"
+utf-8;F:digest"%.‘h"05J2	-5/~\g}ånÙp±DÔµ·ƒ=àq(:lengthi 	:dependencies_digest"%uiÜUúG©¬UŒòãYÛ¨ÏzTÀ„uÂgåŸår:idI"E163e133ed683a01851e29619f82a55d105b82bc8bb0bcb07e3055f0741fd32e1;F:
+mtimel+œ5–W

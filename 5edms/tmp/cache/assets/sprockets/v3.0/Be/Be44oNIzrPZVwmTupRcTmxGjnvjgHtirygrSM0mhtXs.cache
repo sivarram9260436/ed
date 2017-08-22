@@ -1,0 +1,32 @@
+{:uriI"—file://app/assets/bootstrap/docs/_includes/components/jumbotron.html?type=text/html&id=ce74062f5ba4387d82695a2b58fd92e2387869bedd0bed8d85c55250fdf5e472:ET:load_pathI"app/assets/bootstrap;T:filenameI"Bapp/assets/bootstrap/docs/_includes/components/jumbotron.html;T:	nameI"(docs/_includes/components/jumbotron;T:logical_pathI"-docs/_includes/components/jumbotron.html;T:content_typeI"text/html;T:sourceI""<div class="bs-docs-section">
+  <h1 id="jumbotron" class="page-header">Jumbotron</h1>
+
+  <p>A lightweight, flexible component that can optionally extend the entire viewport to showcase key content on your site.</p>
+  <div class="bs-example" data-example-id="simple-jumbotron">
+    <div class="jumbotron">
+      <h1>Hello, world!</h1>
+      <p>This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+      <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
+    </div>
+  </div>
+{% highlight html %}
+<div class="jumbotron">
+  <h1>Hello, world!</h1>
+  <p>...</p>
+  <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
+</div>
+{% endhighlight %}
+  <p>To make the jumbotron full width, and without rounded corners, place it outside all <code>.container</code>s and instead add a <code>.container</code> within.</p>
+{% highlight html %}
+<div class="jumbotron">
+  <div class="container">
+    ...
+  </div>
+</div>
+{% endhighlight %}
+</div>
+;T:metadata{	:dependencieso:Set:
+@hash}
+I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"2processors:type=text/html&file_type=text/html;TTI"Pfile-digest://app/assets/bootstrap/docs/_includes/components/jumbotron.html;TTF:charsetI"
+utf-8;F:digest"%Ô57²’^F“ƒY_5"ú*¶Ò†~‹AÏ™†»51:lengthi":dependencies_digest"%×«~vÿwÔä_T_“Ì•İ¶[ıûq‰=˜]ÀŸ{…Ì:idI"Ece74062f5ba4387d82695a2b58fd92e2387869bedd0bed8d85c55250fdf5e472;F:
+mtimel+œ5–W

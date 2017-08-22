@@ -1,0 +1,239 @@
+<style>
+  .save-button{
+    display:none;
+  }
+</style>
+
+<html>
+<%#@profiles.each do |p|%>
+<%#for p in @profiles%>
+<%p=@profile%>
+<table border="2" align="center" cellpadding="10">
+<tr>
+<th>Title</th>
+<td><%=p.title%></td></tr>
+<tr><th>First Name</th>
+<td><%=p.emp_name%></td></tr>
+<tr><th>Middle Name</th>
+<td><%=p.middle_name%></td></tr>
+<tr><th>Last Name</th>
+<td><%=p.last_name%></td></tr>
+<tr><th>Employee ID</th>
+<td><%=p.empl_id%></td></tr>
+<tr><th>D.O.B in Certficate</th>
+<td><%=p.dob%></td></tr>
+<tr><th>Actual D.O.B</th>
+<td><%=p.personal_detail.p_dob if p.personal_detail %></td></tr>
+<tr><th>Gender</th>
+<td><%=p.gender%></td></tr>
+<tr><th>Martial Status</th>
+<td><%=p.martial_status%></td></tr>
+<tr><th>Contact Number</th>
+<td><%=p.contact_no%></td></tr>
+<tr><th>Office Contact Number</th>
+<td><%=p.office_contact_no%></td></tr>
+<tr><th>PAN Number</th>
+<td><%=p.pan_number%></td></tr>
+<tr><th>PF Number</th>
+<td><%=p.pf_number%></td></tr>
+<!--<tr><th>TL mailid</th>
+<td><%#=p.tl_mailid%></td></tr-->
+  <tr><th>PF Number</th>
+    <td><%=p.pf_number%></td></tr>
+
+<tr><th>UAN number</th>
+<td><%=p.official_mailid%></td></tr>
+<tr><th>Leave Approver Mail Id
+
+</th>
+
+<td class="mail"><%=p.manager_mailid%>
+  <th><%#=link_to "leave approved by HR",{:controller => "employee", :action => "new"},:id =>"leave-button"%>
+ <%= button_tag "Edit" ,{:class =>"leave-button"}%>
+    <%= button_tag "save" ,{:class =>"save-button"}%>
+    <%= hidden_field_tag "emp_id", p.id %>
+  </th>
+  </td>
+</tr>
+
+<tr><th>Father name</th>
+<td><%=p.personal_detail.father_name if p.personal_detail%></td></tr>
+<tr><th>Mother name</th>
+<td><%=p.personal_detail.mother_name if p.personal_detail%></td></tr>
+<tr><th>Blood Group</th>
+<td><%=p.personal_detail.blood_group if p.personal_detail%></td></tr>
+<tr><th>Personal Mail Id</th>
+<td><%=p.personal_detail.personalmail_id if p.personal_detail%></td></tr>
+<tr><th>Anniversary Date</th>
+<td><%=p.personal_detail.anniversary_date if p.personal_detail%></td></tr>
+<tr><th>Local Address</th>
+<td><%=p.personal_detail.local_address if p.personal_detail%></td></tr>
+<tr><th>Permanent Address</th>
+<td><%=p.personal_detail.permanent_address if p.personal_detail%></td></tr>
+<tr><th>Emergency Person</th>
+<td><%=p.personal_detail.guardian if p.personal_detail%></td></tr>
+<tr><th>Relationship</th>
+<td><%=p.personal_detail.relationship if p.personal_detail%></td></tr>
+<tr><th>Emergency Number</th>
+<td><%=p.personal_detail.emergency_contact if p.personal_detail%></td></tr>
+<tr><th>Change Of Address</th>
+  <td><%=p.personal_detail.changeof_address if p.personal_detail%></td></tr>
+
+    <tr><th>Passport Number</th>
+    <td><%=p.personal_detail.passport_number if p.personal_detail%></td></tr>
+    <tr><th>Linked IN</th>
+
+      <td><%=p.personal_detail.linkedin_url if p.personal_detail%></td></tr>
+    <tr><th>FaceBook</th>
+      <td><%=p.personal_detail.facebook_url if p.personal_detail%></td></tr>
+    <tr><th>Twitter</th>
+      <td><%=p.personal_detail.twitter_url if p.personal_detail%></td></tr>
+<tr><th>CompanyI</th>
+<td><%=p.personal_detail.company_name if p.personal_detail%></td></tr>      
+<tr><th>Designation</th>
+<td><%=p.personal_detail.designation if p.personal_detail%></td></tr>
+<tr><th>Year of Experience</th>
+<td><%=p.personal_detail.experience if p.personal_detail%></td></tr>
+<tr><th>CompanyII</th>
+<td><%=p.personal_detail.company_name2 if p.personal_detail%></td></tr>      
+<tr><th>Designation</th>
+<td><%=p.personal_detail.designation2 if p.personal_detail%></td></tr>
+<tr><th>Year of Experience</th>
+<td><%=p.personal_detail.experience2 if p.personal_detail%></td></tr>
+
+
+<tr><th>PG</th>
+<td><%=p.personal_detail.pg if p.personal_detail%></td></tr>
+<tr><th>UG</th>
+<td><%=p.personal_detail.ug if p.personal_detail%></td></tr>
+<tr><th>Diploma</th>
+<td><%=p.personal_detail.diploma if p.personal_detail%></td></tr>
+<tr><th>12th/Puc</th>
+<td><%=p.personal_detail.puc if p.personal_detail%></td></tr>
+<tr><th>10th</th>
+<td><%=p.personal_detail.tenth if p.personal_detail%></td></tr>
+
+
+
+</table>
+<%=button_to 'back',:controller=>"employee",:action=>"display"%>
+
+<script>
+  $('.leave-button').click(function() {
+    $('.mail').attr('contenteditable', 'true');
+    $('.leave-button').hide();
+    $('.save-button').show();
+  });
+    $('.save-button').click(function(){
+      var a =  $('.mail').text().trim();
+      var b = $('#emp_id').val();
+
+     $.ajax({
+      type: 'POST',
+      url: '/employee/update_tl_email_for_employee?mail_id=' + a + '&emp_id=' + b,
+      datatype: "html",
+      beforeSend: function (xhr) {
+        xhr.setRequestHeader('X-CSRF-Token', $('meta[name="csrf-token"]').attr('content'))
+      },
+      success: function (data) {
+        alert(data);
+        window.location.reload();
+      }
+    });
+
+    });
+</script>
+
+<!--<script>-->
+//  $('#employee_detail_manager_mailid').keyup(function(){
+//
+//
+//    var class_id = $('#employee_detail_manager_mailid').val();
+//
+//    $.ajax({
+//      type: "GET",
+//      url: "/employee/new" + class_id ,
+//      datatype: "html",
+//      beforeSend: function (xhr) {
+//        xhr.setRequestHeader('X-CSRF-Token', $('meta[name="csrf-token"]').attr('content'))
+//      },
+//
+//
+//      success: function (data) {
+//        $('.triuble').html(data);
+//      }
+//    });
+//  });
+<!--</script>-->
+
+<script>
+//  $("#leave-button").click(function(){
+//  event.preventDefault();
+//  $('.mail').attr('contenteditable','true');
+//  $('#leave-button').text('save');
+//  $(this).attr('id', 'save-button');
+//
+//});
+  </script>
+
+
+  <!--<script>-->
+
+//  $("#save-button").click(function(){
+//
+//
+//    var title = $('.mail').val();
+//    //var text = $('#article_text').val();
+//    if (title == "" )
+//    {
+//      alert("field is empty");
+//    }
+//
+//
+//    else {
+//
+//      //var url = ; // the script where you handle the form input.
+//
+//      $.ajax({
+//        type: "POST",
+//        url: "/employee/show",
+//        data: title, // serializes the form's elements.
+//
+//        beforeSend: function (xhr) {
+//          xhr.setRequestHeader('X-CSRF-Token', $('meta[name="csrf-token"]').attr('content'))
+//        },
+//        success: function (data) {
+//
+//
+//          $('.check2').html(data);
+//
+//        }
+//      });
+//    }
+//  });
+//
+//
+<!--</script>-->
+
+
+
+<script>
+//$('#save-button').click(function() {
+//var $this = $(this);
+//var tds = $this.closest('tr').find('td').filter(function() {
+//return $(this).find('#save-button').length === 0;
+//});
+//if ($this.html() === 'Edit') {
+//$this.html('Save');
+//tds.prop('contenteditable', true);
+//} else {
+//$this.html('Edit');
+//tds.prop('contenteditable', false);
+//}
+//});
+
+//$('#save-button').click(function() {
+//  alert('1');
+//});
+
+</script>

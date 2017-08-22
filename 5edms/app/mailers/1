@@ -1,0 +1,13 @@
+class LeaveMailer < ActionMailer::Base
+
+ def apply_email(leave)
+   @leave_record =leave
+   @sender =@leave_record.employee_detail.official_mailid
+   @to=@leave_record.employee_detail.manager_mailid
+   @tl=@leave_record.employee_detail.tl_mailid
+   
+  mail(:from=>@sender,:to =>@to,:cc => [@tl,"chandrala@kreatio.com"],:bcc =>["vijayakumar@kreatio.com"],:subject => "Request for a leave")
+  end
+  
+  end
+
